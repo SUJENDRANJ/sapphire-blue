@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation Causes Carousel</title>
+
+    <style>
+      .carousel-section .carousel-wrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 1000px;
+        padding-top: 200px;
+      }
+
+      .carousel-section .carousel {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        gap: 20px;
+        width: max-content;
+      }
+
+      .carousel-section .carousel-inner {
+        display: flex;
+        gap: 20px;
+      }
+
+      .carousel-section .card {
+        flex: 0 0 280px;
+        height: 300px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.4s ease, height 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        color: white;
+      }
+
+      .carousel-section .card:hover {
+        transform: scale(1.2);
+        height: 400px;
+        z-index: 3;
+      }
+
+      .carousel-section .card:hover h3 {
+        display: none;
+      }
+
+      .carousel-section .card svg {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+        fill: white;
+      }
+
+      .carousel-section .card img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        z-index: 0;
+      }
+
+      .carousel-section .card h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 200px;
+        text-align: center;
+        z-index: 1;
+      }
+
+      .carousel-section .card-content {
+        position: absolute;
+        bottom: 20px;
+        padding: 0 20px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .carousel-section .card:hover .card-content {
+        opacity: 1;
+      }
+
+      .carousel-section .card-content p {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .carousel-section .card-content button {
+        background: #ffffff;
+        color: #333;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-section .card-content button:hover {
+        background: #f4f4f4;
+      }
+
+      /* Unique backgrounds for each card */
+      .carousel-section .bg1 {
+        background: #2e7d32;
+      }
+      .carousel-section .bg2 {
+        background: #6a1b9a;
+      }
+      .carousel-section .bg3 {
+        background: #0277bd;
+      }
+      .carousel-section .bg4 {
+        background: #f9a825;
+      }
+      .carousel-section .bg5 {
+        background: #c62828;
+      }
+      .carousel-section .bg6 {
+        background: #1565c0;
+      }
+      .carousel-section .bg7 {
+        background: #ef6c00;
+      }
+      .carousel-section .bg8 {
+        background: #ad1457;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .carousel-section .card {
+          flex: 0 0 220px;
+          height: 260px;
+        }
+
+        .carousel-section .card:hover {
+          height: 360px;
+        }
+
+        .carousel-section .card svg {
+          width: 50px;
+          height: 50px;
+        }
+
+        .carousel-section .card h3 {
+          font-size: 1rem;
+        }
+
+        .carousel-section .card-content p {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Support Our Causes</h1>
+
+    <div class="carousel-section" style="">
+      <div
+        class="carousel-wrapper"
+        style="
+          overflow: hidden;
+          width: 100%;
+          height: 1000px;
+          padding-top: 200px;
+        "
+      >
+        <div
+          class="carousel-wrapper"
+          style="
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+            padding-top: 200px;
+          "
+        >
+          <div
+            class="carousel"
+            style="
+              display: flex;
+              animation: scroll 30s linear infinite;
+              gap: 20px;
+              width: max-content;
+            "
+          >
+            <!-- Clone 1 -->
+            <div class="carousel-inner" style="display: flex; gap: 20px">
+              <!-- Card 1 -->
+              <div
+                class="card bg1"
+                style="
+                  flex: 0 0 280px;
+                  height: 300px;
+                  background: #2e7d32;
+                  border-radius: 20px;
+                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  transition: transform 0.4s ease, height 0.4s ease;
+                  position: relative;
+                  overflow: hidden;
+                  padding: 20px;
+                  color: white;
+                  cursor: pointer;
+                "
+                onmouseenter="this.style.transform='scale(1.2)'; this.style.height='400px'; this.style.zIndex='3'; this.querySelector('h3').style.display='none'; this.querySelector('.card-content').style.opacity='1';"
+                onmouseleave="this.style.transform='scale(1)'; this.style.height='300px'; this.style.zIndex='1'; this.querySelector('h3').style.display='block'; this.querySelector('.card-content').style.opacity='0';"
+              >
+                <svg
+                  viewBox="0 0 64 64"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 15px;
+                    fill: white;
+                  "
+                >
+                  <path
+                    d="M32 2C18 2 6 14 6 28s12 26 26 26 26-12 26-26S46 2 32 2z"
+                  />
+                </svg>
+                <h3
+                  style="
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-top: 200px;
+                    text-align: center;
+                    z-index: 1;
+                  "
+                >
+                  Environmental Works
+                </h3>
+                <div
+                  class="card-content"
+                  style="
+                    position: absolute;
+                    bottom: 20px;
+                    padding: 0 20px;
+                    text-align: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    color: white;
+                  "
+                >
+                  <p style="font-size: 0.95rem; margin-bottom: 10px">
+                    Replantation drives, eco-awareness campaigns, and
+                    sustainability.
+                  </p>
+                  <button
+                    onclick="scrollToDonate()"
+                    style="
+                      background: #ffffff;
+                      color: #333;
+                      border: none;
+                      padding: 10px 15px;
+                      border-radius: 8px;
+                      font-weight: bold;
+                      cursor: pointer;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseenter="this.style.background='#f4f4f4'"
+                    onmouseleave="this.style.background='#ffffff'"
+                  >
+                    Donate
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="card bg2"
+                style="
+                  flex: 0 0 280px;
+                  height: 300px;
+                  background: #6a1b9a;
+                  border-radius: 20px;
+                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  transition: transform 0.4s ease, height 0.4s ease;
+                  position: relative;
+                  overflow: hidden;
+                  padding: 20px;
+                  color: white;
+                  cursor: pointer;
+                "
+                onmouseenter="this.style.transform='scale(1.2)'; this.style.height='400px'; this.style.zIndex='3'; this.querySelector('h3').style.display='none'; this.querySelector('.card-content').style.opacity='1';"
+                onmouseleave="this.style.transform='scale(1)'; this.style.height='300px'; this.style.zIndex='1'; this.querySelector('h3').style.display='block'; this.querySelector('.card-content').style.opacity='0';"
+              >
+                <img
+                  src="../aaaaaaa/1.png"
+                  alt=""
+                  style="
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    z-index: 0;
+                  "
+                />
+                <h3
+                  style="
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-top: 200px;
+                    text-align: center;
+                    z-index: 1;
+                  "
+                >
+                  Women Empowerment
+                </h3>
+                <div
+                  class="card-content"
+                  style="
+                    position: absolute;
+                    bottom: 20px;
+                    padding: 0 20px;
+                    text-align: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    color: white;
+                  "
+                >
+                  <p style="font-size: 0.95rem; margin-bottom: 10px">
+                    Training, support, and livelihood programs for rural women.
+                  </p>
+                  <button
+                    onclick="scrollToDonate()"
+                    style="
+                      background: #ffffff;
+                      color: #333;
+                      border: none;
+                      padding: 10px 15px;
+                      border-radius: 8px;
+                      font-weight: bold;
+                      cursor: pointer;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseenter="this.style.background='#f4f4f4'"
+                    onmouseleave="this.style.background='#ffffff'"
+                  >
+                    Donate
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="card bg3"
+                style="
+                  flex: 0 0 280px;
+                  height: 300px;
+                  background: #0277bd;
+                  border-radius: 20px;
+                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  transition: transform 0.4s ease, height 0.4s ease;
+                  position: relative;
+                  overflow: hidden;
+                  padding: 20px;
+                  color: white;
+                  cursor: pointer;
+                "
+                onmouseenter="this.style.transform='scale(1.2)'; this.style.height='400px'; this.style.zIndex='3'; this.querySelector('h3').style.display='none'; this.querySelector('.card-content').style.opacity='1';"
+                onmouseleave="this.style.transform='scale(1)'; this.style.height='300px'; this.style.zIndex='1'; this.querySelector('h3').style.display='block'; this.querySelector('.card-content').style.opacity='0';"
+              >
+                <svg
+                  viewBox="0 0 64 64"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 15px;
+                    fill: white;
+                  "
+                >
+                  <path d="M4 4h56v56H4z" />
+                </svg>
+                <h3
+                  style="
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-top: 200px;
+                    text-align: center;
+                    z-index: 1;
+                  "
+                >
+                  Rural Development
+                </h3>
+                <div
+                  class="card-content"
+                  style="
+                    position: absolute;
+                    bottom: 20px;
+                    padding: 0 20px;
+                    text-align: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    color: white;
+                  "
+                >
+                  <p style="font-size: 0.95rem; margin-bottom: 10px">
+                    Improving access, resources, and growth in rural
+                    communities.
+                  </p>
+                  <button
+                    onclick="scrollToDonate()"
+                    style="
+                      background: #ffffff;
+                      color: #333;
+                      border: none;
+                      padding: 10px 15px;
+                      border-radius: 8px;
+                      font-weight: bold;
+                      cursor: pointer;
+                      transition: all 0.3s ease;
+                    "
+                    onmouseenter="this.style.background='#f4f4f4'"
+                    onmouseleave="this.style.background='#ffffff'"
+                  >
+                    Donate
+                  </button>
+                </div>
+              </div>
+
+              <!-- ... Repeat the same inline styling for cards 4 to 8 and the clone cards ... -->
+            </div>
+            <!-- Clone 2 (repeat for infinite scroll) -->
+            <div class="carousel-inner" style="display: flex; gap: 20px">
+              <!-- Same cards repeated with inline styles as above -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donation Section -->
+    <section id="donate-section">
+      <h2>Make a Donation</h2>
+      <p>Your contribution helps transform lives and uplift communities.</p>
+      <!-- Add your donation form or payment buttons here -->
+    </section>
+
+    <!-- Scroll script -->
+    <script>
+      function scrollToDonate() {
+        const section = document.getElementById("donate-section");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

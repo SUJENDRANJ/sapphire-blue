@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation Showcase</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f9f9f9;
+      }
+
+      .card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-bottom: 3rem;
+      }
+
+      .card img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+
+      .card__title {
+        margin: 0;
+        font-size: 22px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .card__description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* Carousel */
+      .donation-carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        transition: transform 0.5s ease-in-out;
+        position: relative;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .carousel-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .carousel-item:hover .carousel-overlay {
+        opacity: 1;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hover Card -->
+    <div class="card">
+      <img src="aaaaaaa/about-2.jpg" alt="Environmental" />
+      <div class="card__content">
+        <p class="card__title">Environmental Works</p>
+        <p class="card__description">
+          Replantation drives, eco-awareness campaigns, and sustainable living
+          practices.
+        </p>
+      </div>
+    </div>
+
+    <!-- Auto-Sliding Carousel -->
+    <div class="donation-carousel" id="carousel">
+      <div class="carousel-item">
+        <img src="aaaaaaa/about-2.jpg" alt="Skill Training" />
+        <div class="carousel-overlay">
+          <h4>Skill Development</h4>
+          <p>
+            Over 473 rural youth trained in textile and tailoring under KKT
+            initiative.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="aaaaaaa/footer.jpg" alt="School Kits" />
+        <div class="carousel-overlay">
+          <h4>Student Support</h4>
+          <p>
+            Distributed school kits to over 800 underprivileged children across
+            villages.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="aaaaaaa/ChatGPT Image May 23, 2025, 08_08_27 PM.png"
+          alt="Medical Camp"
+        />
+        <div class="carousel-overlay">
+          <h4>Medical Relief</h4>
+          <p>
+            Free medical and eye camps for over 1000 villagers in remote areas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const totalItems = document.querySelectorAll(".carousel-item").length;
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % totalItems;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }, 4000);
+    </script>
+  </body>
+</html>

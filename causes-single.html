@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="template" />
+    <link
+      rel="icon"
+      title="Sapphire Blue Social Trust"
+      sizes="16x16"
+      type="image/png"
+      href="assets/images/logo.png"
+    />
+    <title>Sapphire Blue Social Trust</title>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css" />
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <style>
+      .carousel-section .carousel-wrapper {
+        overflow: hidden;
+        width: 100%;
+        /* height: 560px; */
+        padding-top: 60px;
+        position: relative;
+        /* background-color: red; */
+        margin: 0;
+      }
+
+      .carousel-section .carousel {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        gap: 20px;
+        width: max-content;
+        will-change: transform;
+      }
+
+      .carousel-section .carousel-inner {
+        display: flex;
+        gap: 20px;
+      }
+
+      .carousel-section .card {
+        flex: 0 0 340px;
+        height: 380px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1),
+          height 0.4s cubic-bezier(0.4, 2, 0.6, 1), z-index 0s;
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        color: white;
+        z-index: 1;
+      }
+
+      /* Ensure scaling doesn't overflow carousel */
+      .carousel-section .carousel-inner {
+        perspective: 1200px;
+      }
+
+      .carousel-section .card:hover {
+        transform: scale(1);
+        height: 430px;
+        z-index: 10;
+      }
+
+      .carousel-section .card:not(:hover) {
+        z-index: 1;
+      }
+
+      .carousel-section .card:hover h3 {
+        display: none;
+      }
+
+      .carousel-section .card svg {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+        fill: white;
+      }
+
+      .carousel-section .card img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        z-index: 0;
+      }
+
+      .carousel-section .card h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 240px;
+        text-align: center;
+        z-index: 1;
+        color: white;
+      }
+
+      .carousel-section .card-content {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+      }
+
+      .carousel-section .card:hover .card-content {
+        opacity: 1;
+      }
+
+      .carousel-section .card-content p {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+      }
+
+      .carousel-section .card-content button {
+        background: #ffffff;
+        color: #333;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-section .card-content button:hover {
+        background: #f4f4f4;
+      }
+
+      /* Unique backgrounds for each card */
+      .carousel-section .bg1 {
+        background: #2e7d32;
+      }
+      .carousel-section .bg2 {
+        background: #6a1b9a;
+      }
+      .carousel-section .bg3 {
+        background: #0277bd;
+      }
+      .carousel-section .bg4 {
+        background: #f9a825;
+      }
+      .carousel-section .bg5 {
+        background: #c62828;
+      }
+      .carousel-section .bg6 {
+        background: #1565c0;
+      }
+      .carousel-section .bg7 {
+        background: #ef6c00;
+      }
+      .carousel-section .bg8 {
+        background: #ad1457;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .carousel-section .card {
+          flex: 0 0 280px;
+          height: 300px;
+        }
+        .carousel-section .card:hover {
+          height: 350px;
+        }
+        .carousel-section .card svg {
+          width: 60px;
+          height: 60px;
+        }
+        .carousel-section .card h3 {
+          font-size: 1.2rem;
+          margin-top: 200px;
+        }
+        .carousel-section .card-content p {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .carousel-section .card {
+          flex: 0 0 220px;
+          height: 260px;
+        }
+
+        .carousel-section .card:hover {
+          height: 320px;
+        }
+
+        .carousel-section .card svg {
+          width: 50px;
+          height: 50px;
+        }
+
+        .carousel-section .card h3 {
+          font-size: 1rem;
+          margin-top: 140px;
+        }
+
+        .carousel-section .card-content p {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main_page_wrapper">
+      <!-- ==== header start ==== -->
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-7 col-12">
+                <div class="contacr_info">
+                  <ul>
+                    <li>
+                      <div class="number">
+                        <span>NEWS:</span>Give Ready to help us
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-5 col-12">
+                <div class="contacr_right">
+                  <ul>
+                    <li><span>Visit our social pages:</span></li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-twitter-alt"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-skype"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_wrap">
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="" />
+          </a>
+          <div class="header_about_btn" onclick="openNav()">
+            <img src="assets/images/about_btn.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-8 col-12">
+                <div class="mobile_menu_btn">
+                  <div class="icon">
+                    <i class="ti-align-justify" id="bar_close"></i>
+                  </div>
+                </div>
+                <div class="menu_wrap" id="menu_wrap">
+                  <ul class="main_menu">
+                    <li>
+                      <a href="index.html">Home</a>
+                    </li>
+
+                    <li><a href="about.html">about us</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+                    <li>
+                      <a href="project-single.html">projects</a>
+                    </li>
+
+                    <li><a href="blog.html">Blogs</a></li>
+
+                    <li><a href="contact.html">contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4 col-12">
+                <div class="header_right">
+                  <div class="search_icon">
+                    <i class="ti-search bx-search"></i>
+                    <form class="input-box">
+                      <div>
+                        <input
+                          class="search_fild"
+                          type="text"
+                          placeholder="Search..."
+                        />
+                        <button type="button"><i class="ti-search"></i></button>
+                      </div>
+                    </form>
+                  </div>
+                  <a href="causes-single.html" class="btn_primary"
+                    >DONATE NOW<i class="ti-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ==== Page Title Start ==== -->
+      <section class="page_title_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="content">
+                <h2>Donate</h2>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>Make a Donation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/slider/shape-5.png" alt="Decorative Shape" />
+        </div>
+      </section>
+
+      <div class="carousel-section">
+        <div class="carousel-wrapper">
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <!-- Clone 1 -->
+              <div class="carousel-inner">
+                <!-- Card 1 -->
+                <div class="card bg1">
+                  <img src="./aaaaaaa/child welfare.png" alt="" />
+
+                  <h3>Environmental Works</h3>
+                  <div class="card-content">
+                    <p>
+                      Replantation drives, eco-awareness campaigns, and
+                      sustainability.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Love 💚
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card bg2">
+                  <img src="../aaaaaaa/1.png" alt="" />
+                  <h3>Women Empowerment</h3>
+                  <div class="card-content">
+                    <p>
+                      Training, support, and livelihood programs for rural
+                      women.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Hope 💖
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card bg3">
+                  <img src="./aaaaaaa/child welfare.png" alt="" />
+                  <h3>Rural Development</h3>
+                  <div class="card-content">
+                    <p>
+                      Improving access, resources, and growth in rural
+                      communities.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Care 🤝
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card bg4">
+                  <img
+                    src="../aaaaaaa/ChatGPT Image May 23, 2025, 08_08_02 PM.png"
+                    alt=""
+                  />
+
+                  <h3>Schemes Awareness</h3>
+                  <div class="card-content">
+                    <p>
+                      Helping marginalized groups understand and use government
+                      schemes.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Kindness 💛
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card bg5">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="30" />
+                  </svg>
+                  <h3>Medical Camps</h3>
+                  <div class="card-content">
+                    <p>Free checkups, awareness, and aid in remote villages.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Compassion 💙
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card bg6">
+                  <img src="./aaaaaaa/child welfare.png" alt="" />
+                  <h3>Skill Development</h3>
+                  <div class="card-content">
+                    <p>Workshops and training to build job-ready skills.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Purpose 🌟
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card bg7">
+                  <img src="./aaaaaaa/child welfare.png" alt="" />
+
+                  <h3>Sports Work</h3>
+                  <div class="card-content">
+                    <p>Empowering youth through sports and fitness events.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Joy 🏅
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card bg8">
+                  <svg viewBox="0 0 64 64">
+                    <path
+                      d="M32 2C15 2 2 15 2 32s13 30 30 30 30-13 30-30S49 2 32 2zm4 44h-8V36h8v10zm0-14h-8V18h8v14z"
+                    />
+                  </svg>
+                  <h3>Emergency Medical</h3>
+                  <div class="card-content">
+                    <p>Fast aid for urgent health needs in rural areas.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Urgency ❤️‍🩹
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Clone 2 (repeat for infinite scroll) -->
+              <div class="carousel-inner">
+                <!-- You can copy the same 8 cards again or use JS to duplicate -->
+                <!-- ... same 8 cards as above ... -->
+
+                <div class="card bg1">
+                  <svg viewBox="0 0 64 64">
+                    <path
+                      d="M32 2C18 2 6 14 6 28s12 26 26 26 26-12 26-26S46 2 32 2z"
+                    />
+                  </svg>
+                  <h3>Environmental Works</h3>
+                  <div class="card-content">
+                    <p>
+                      Replantation drives, eco-awareness campaigns, and
+                      sustainability.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Love 💚
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card bg2">
+                  <svg viewBox="0 0 64 64">
+                    <path
+                      d="M32 2a12 12 0 0112 12c0 6.6-5.4 12-12 12S20 20.6 20 14a12 12 0 0112-12zm0 36c10.5 0 19 8.5 19 19H13c0-10.5 8.5-19 19-19z"
+                    />
+                  </svg>
+                  <h3>Women Empowerment</h3>
+                  <div class="card-content">
+                    <p>
+                      Training, support, and livelihood programs for rural
+                      women.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Hope 💖
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card bg3">
+                  <svg viewBox="0 0 64 64"><path d="M4 4h56v56H4z" /></svg>
+                  <h3>Rural Development</h3>
+                  <div class="card-content">
+                    <p>
+                      Improving access, resources, and growth in rural
+                      communities.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Care 🤝
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card bg4">
+                  <svg viewBox="0 0 64 64">
+                    <path d="M2 32h60v4H2zM10 20h44v4H10zM20 44h24v4H20z" />
+                  </svg>
+                  <h3>Schemes Awareness</h3>
+                  <div class="card-content">
+                    <p>
+                      Helping marginalized groups understand and use government
+                      schemes.
+                    </p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Kindness 💛
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card bg5">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="30" />
+                  </svg>
+                  <h3>Medical Camps</h3>
+                  <div class="card-content">
+                    <p>Free checkups, awareness, and aid in remote villages.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Compassion 💙
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card bg6">
+                  <svg viewBox="0 0 64 64"><path d="M8 8h48v48H8z" /></svg>
+                  <h3>Skill Development</h3>
+                  <div class="card-content">
+                    <p>Workshops and training to build job-ready skills.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Purpose 🌟
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card bg7">
+                  <svg viewBox="0 0 64 64">
+                    <path d="M32 10l8 20H24l8 20" />
+                  </svg>
+                  <h3>Sports Work</h3>
+                  <div class="card-content">
+                    <p>Empowering youth through sports and fitness events.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Joy 🏅
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card bg8">
+                  <svg viewBox="0 0 64 64">
+                    <path
+                      d="M32 2C15 2 2 15 2 32s13 30 30 30 30-13 30-30S49 2 32 2zm4 44h-8V36h8v10zm0-14h-8V18h8v14z"
+                    />
+                  </svg>
+                  <h3>Emergency Medical</h3>
+                  <div class="card-content">
+                    <p>Fast aid for urgent health needs in rural areas.</p>
+                    <button onclick="scrollToDonate()">
+                      Donate with Urgency ❤️‍🩹
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==== Donation Section Start ==== -->
+      <section id="donate-section" class="causes_single_page section_space">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="title">
+                <h3>Make a Donation</h3>
+              </div>
+              <div class="wrap">
+                <!-- Donation Form First -->
+                <form
+                  class="donet_from"
+                  style="
+                    margin-bottom: 30px;
+                    background: #f9f9f9;
+                    padding: 24px 18px;
+                    border-radius: 12px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                  "
+                >
+                  <div style="margin-bottom: 18px">
+                    <input
+                      class="from-contol"
+                      type="text"
+                      placeholder="Full Name *"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 6px;
+                        border: 1px solid #ccc;
+                      "
+                    />
+                    <input
+                      class="from-contol"
+                      type="email"
+                      placeholder="Email *"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 6px;
+                        border: 1px solid #ccc;
+                      "
+                    />
+                    <input
+                      class="from-contol"
+                      type="number"
+                      placeholder="Amount (₹) *"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 6px;
+                        border: 1px solid #ccc;
+                      "
+                    />
+                  </div>
+                  <div class="checkbox-container" style="margin-bottom: 16px">
+                    <input type="checkbox" id="agree" required />
+                    <label for="agree" class="checkbox-label">
+                      I agree to the <a href="#">Terms of Service</a>.
+                    </label>
+                  </div>
+                  <div class="donet_from_btn" style="text-align: left">
+                    <button
+                      type="submit"
+                      style="
+                        background: #2e7d32;
+                        color: #fff;
+                        border: none;
+                        padding: 12px 28px;
+                        border-radius: 8px;
+                        font-weight: bold;
+                        cursor: pointer;
+                      "
+                    >
+                      Donate Now
+                    </button>
+                  </div>
+                </form>
+
+                <!-- OR Divider -->
+                <div
+                  style="
+                    text-align: center;
+                    margin: 18px 0;
+                    font-weight: bold;
+                    color: #888;
+                  "
+                >
+                  OR
+                </div>
+
+                <!-- Bank Details -->
+                <div
+                  class="widget_causes"
+                  style="
+                    background: #e3f2fd;
+                    padding: 20px 18px;
+                    border-radius: 12px;
+                    margin-bottom: 30px;
+                  "
+                >
+                  <div class="donet_btn" style="margin-bottom: 10px">
+                    <h3 style="margin-bottom: 10px; font-size: 1.5em">
+                      Bank Details
+                    </h3>
+                    <ul style="list-style: none; padding: 0">
+                      <li style="font-size: 1.3em; font-weight: bold">
+                        Sapphire Blue Social Trust
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="title" style="margin-bottom: 0">
+                    <table
+                      style="
+                        width: 100%;
+                        font-size: 1.2em;
+                        background: #fff;
+                        border-radius: 8px;
+                        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+                        border-collapse: separate;
+                        border-spacing: 0;
+                        margin-bottom: 0;
+                      "
+                    >
+                      <tr>
+                        <td
+                          style="
+                            font-weight: bold;
+                            padding: 10px 8px;
+                            width: 180px;
+                          "
+                        >
+                          Account Number:
+                        </td>
+                        <td style="padding: 10px 8px">002502000014913</td>
+                      </tr>
+                      <tr>
+                        <td style="font-weight: bold; padding: 10px 8px">
+                          IFSC Code:
+                        </td>
+                        <td style="padding: 10px 8px">I0BA0000025</td>
+                      </tr>
+                      <tr>
+                        <td style="font-weight: bold; padding: 10px 8px">
+                          Branch:
+                        </td>
+                        <td style="padding: 10px 8px">Erode Main Branch</td>
+                      </tr>
+                      <tr>
+                        <td style="font-weight: bold; padding: 10px 8px">
+                          Bank:
+                        </td>
+                        <td style="padding: 10px 8px">Indian Overseas Bank</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Motivation Text -->
+                <div class="top_content" style="margin-bottom: 18px">
+                  <h2 style="font-size: 1.3em; margin-bottom: 10px">
+                    Your support helps us reach thousands across Tamil Nadu with
+                    education, healthcare, and livelihood support.
+                  </h2>
+                  <p style="margin-bottom: 0">
+                    At SBST, your contribution funds impactful programs: over
+                    473 trained in textile skills under KKT, 800+ students aided
+                    with school kits, 1000+ villagers treated in free medical
+                    and eye camps, and SC women empowered to launch businesses.
+                    Your donation changes lives.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Motivation Text -->
+              <div class="bottom_text" style="margin-top: 18px">
+                <p>
+                  Your kindness fuels our mission. Whether it's ₹500 or ₹5000,
+                  your donation helps educate children, empower women, and treat
+                  villagers with dignity.
+                </p>
+                <p>
+                  Let's build a stronger Tamil Nadu — together. Thank you for
+                  choosing to give.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==== footer starts ====  -->
+      <section class="footer_section">
+        <div class="footer_top">
+          <div class="container">
+            <div class="row">
+              <!-- About Widget -->
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_about">
+                  <div class="footer_logo">
+                    <a href="index.html">
+                      <img
+                        src="assets/images/logo3.png"
+                        alt="Sapphire Blue Social Trust Logo"
+                      />
+                    </a>
+                  </div>
+                  <p>
+                    Sapphire Blue Social Trust is committed to empowering
+                    marginalized communities through education, health, and
+                    skill development programs across Tamil Nadu.
+                  </p>
+                  <ul class="social_widget">
+                    <li>
+                      <a href="" target="_blank"><i class="ti-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"
+                        ><i class="ti-twitter-alt"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"><i class="ti-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"
+                        ><i class="ti-instagram"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Quick Links Widget -->
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_link">
+                  <h2>Quick Links</h2>
+                  <ul>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Latest News</a></li>
+                    <li><a href="causes-single.html">Donate</a></li>
+                    <li><a href="our-gallery.html">Our Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Gallery Widget -->
+
+              <!-- <div class="mobile-only-space" style="height: 30px"></div> -->
+
+              <!-- Contact Widget -->
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_contact">
+                  <h2>Contact Us</h2>
+                  <div>
+                    <span>
+                      No.5 Vemandampalayam, Attavanai Hanumanpalli Post,<br />
+                      Arachalur via, Erode - 638101,<br />
+                      Tamil Nadu, India
+                    </span>
+                  </div>
+                  <div>
+                    <span>Phone: +91 99762 9999</span><br />
+                    <span>Phone: +91 98945 35100</span><br />
+                    <span>Phone: +91 96777 77193</span>
+                  </div>
+                  <div>
+                    <span>Email: sapphirebluesocialtrust@gmail.com</span><br />
+                    <span>Website: www.sapphirebluesocialtrust.org</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p>
+                  Copyright © Sapphire Blue Social Trust 2025. All rights
+                  reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shape-1">
+          <img src="assets/images/footer/shape-1.png" alt="Decorative Shape" />
+        </div>
+        <div class="shape-2">
+          <img src="assets/images/footer/shape-2.png" alt="Decorative Shape" />
+        </div>
+      </section>
+      <!-- Go to Top Button -->
+      <!-- <a id="button"></a> -->
+
+      <!-- Sticky Donate Button -->
+
+      <!-- Sticky Donate Button -->
+      <style>
+        #sticky-donate-btn {
+          position: fixed;
+          bottom: 32px;
+          right: 32px;
+          z-index: 9999;
+          background: #e53535; /* Changed to red */
+          color: #fff;
+          border: none;
+          border-radius: 50px;
+          padding: 18px 36px;
+          font-size: 1.2em;
+          font-weight: bold;
+          box-shadow: 0 4px 18px rgba(44, 62, 80, 0.18);
+          cursor: pointer;
+          transition: background 0.2s, transform 0.18s;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        #sticky-donate-btn:hover {
+          background: #b71c1c;
+          transform: scale(1.06);
+        }
+        #sticky-donate-btn .heart-icon {
+          width: 1.5em;
+          height: 1.5em;
+          display: inline-block;
+          vertical-align: middle;
+          fill: #fff; /* Heart is white for contrast */
+          stroke: #fff;
+          stroke-width: 0;
+          filter: drop-shadow(0 0 6px #fff);
+          animation: heart-beat 1.2s infinite;
+          transition: filter 0.2s;
+        }
+        #sticky-donate-btn:hover .heart-icon {
+          filter: drop-shadow(0 0 12px #fff);
+          animation: heart-beat-fast 0.6s infinite;
+        }
+        @keyframes heart-beat {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          10% {
+            transform: scale(1.1);
+          }
+          20% {
+            transform: scale(0.95);
+          }
+          30% {
+            transform: scale(1.05);
+          }
+          40% {
+            transform: scale(0.97);
+          }
+          50% {
+            transform: scale(1);
+          }
+        }
+        @keyframes heart-beat-fast {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          20% {
+            transform: scale(1.18);
+          }
+          40% {
+            transform: scale(0.92);
+          }
+          60% {
+            transform: scale(1.12);
+          }
+          80% {
+            transform: scale(0.98);
+          }
+        }
+        @media (max-width: 900px) {
+          #sticky-donate-btn {
+            padding: 14px 24px;
+            font-size: 1em;
+            bottom: 18px;
+            right: 18px;
+          }
+          #sticky-donate-btn .heart-icon {
+            width: 1.2em;
+            height: 1.2em;
+          }
+        }
+        @media (max-width: 600px) {
+          #sticky-donate-btn {
+            padding: 10px 16px;
+            font-size: 0.98em;
+            bottom: 12px;
+            right: 12px;
+          }
+          #sticky-donate-btn .heart-icon {
+            width: 1em;
+            height: 1em;
+          }
+        }
+      </style>
+      <button
+        id="sticky-donate-btn"
+        onclick="window.location.href='causes-single.html'"
+        aria-label="Donate Now"
+      >
+        <span>Donate Now</span>
+        <svg class="heart-icon" viewBox="0 0 24 24">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            fill="#fff"
+            stroke="#fff"
+          />
+        </svg>
+      </button>
+
+      <script src="assets/js/jquery-min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/slick-animation.min.js"></script>
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="assets/js/counterup.min.js"></script>
+      <script src="assets/js/waypoints.js"></script>
+      <script src="assets/js/datepicker.js"></script>
+      <script src="assets/js/wow.js"></script>
+      <script src="assets/js/jquery.nice-select.js"></script>
+      <script src="assets/js/script.js"></script>
+    </div>
+
+    <!-- Scroll script -->
+    <script>
+      function scrollToDonate() {
+        const section = document.getElementById("donate-section");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>
