@@ -1259,6 +1259,20 @@ img {
   }
 }
 
+/* Make logo image fully left-aligned and absolute for devices lower than 700px */
+@media (max-width: 800px) {
+  .header_wrap .logo img {
+    content: url("../images/logo3.png");
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100px; /* Adjust width as needed */
+  }
+}
+
 /* header_section_s4 */
 .header_section_s4 .contacr_right {
   text-align: right;
