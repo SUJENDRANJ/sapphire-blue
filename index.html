@@ -582,7 +582,7 @@
       <section class="about_section">
         <div class="container">
           <div class="row align-items-center">
-            <!-- Right: Content Only, Full Width on Mobile -->
+            <!-- Content Column -->
             <div
               class="col-lg-12 col-12 wow fadeInRightSlow"
               data-wow-duration="1700ms"
@@ -624,7 +624,63 @@
                   </li>
                 </ul>
 
-                <div class="about_btn mt-4">
+                <!-- New: Highlights / Images Section -->
+                <div class="highlight-section mt-5">
+                  <div class="row g-4">
+                    <!-- Box 1 -->
+                    <div class="col-md-4 col-sm-12">
+                      <div class="highlight-box">
+                        <img
+                          src="./aaaaaaa/birthday.png"
+                          alt="Skill Training"
+                        />
+                        <h4>About person 1</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Praesentium hic nemo rem labore! Enim cumque
+                          libero cum illum fuga, quisquam doloremque dolor id
+                          rerum!
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="col-md-4 col-sm-12">
+                      <div class="highlight-box">
+                        <img
+                          src="./aaaaaaa/birthday.png"
+                          alt="Skill Training"
+                        />
+                        <h4>About person 2</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Praesentium hic nemo rem labore! Enim cumque
+                          libero cum illum fuga, quisquam doloremque dolor id
+                          rerum!
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="col-md-4 col-sm-12">
+                      <div class="highlight-box">
+                        <img
+                          src="./aaaaaaa/birthday.png"
+                          alt="Skill Training"
+                        />
+                        <h4>About person 3</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Praesentium hic nemo rem labore! Enim cumque
+                          libero cum illum fuga, quisquam doloremque dolor id
+                          rerum!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="about_btn mt-5">
                   <a href="about.html" class="btn_primary">
                     Learn More <i class="ti-arrow-right"></i>
                   </a>
@@ -633,235 +689,433 @@
             </div>
           </div>
         </div>
+
         <style>
+          .highlight-box {
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 10px 14px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-align: center;
+            padding: 1em;
+            transition: transform 0.3s;
+            height: 100%;
+          }
+
+          .highlight-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+          }
+
+          .highlight-box h4 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+
+          .highlight-box p {
+            font-size: 0.95em;
+            color: #555;
+          }
+
+          .highlight-box:hover {
+            transform: translateY(-5px);
+          }
+
           @media (max-width: 991px) {
             .about_section .content {
               padding: 1.2em 0.5em !important;
               max-width: 100% !important;
             }
+
+            .highlight-box img {
+              height: 180px;
+            }
           }
+
           @media (max-width: 600px) {
             .about_section .top_title h2,
             .about_section .top_title h3 {
               font-size: 1.2em !important;
             }
+
             .about_section .content {
               font-size: 0.98em !important;
+            }
+
+            .highlight-box {
+              padding: 1em 0.6em;
+            }
+
+            .highlight-box img {
+              height: 160px;
             }
           }
         </style>
       </section>
 
       <!-- ==== Service Section Start ==== -->
-      <section class="service_section section_space">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="top_title">
-                <h2>OUR BEST SERVICES</h2>
-                <h3>Empowering Communities Through Real, Measurable Impact</h3>
+      <style>
+        .carousel-section .carousel-wrapper {
+          overflow: hidden;
+          width: 100%;
+          padding-top: 60px;
+          position: relative;
+          margin: 0;
+        }
+
+        .carousel-section .carousel {
+          display: flex;
+          gap: 20px;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+          scrollbar-width: none; /* Firefox */
+        }
+        .carousel-section .carousel::-webkit-scrollbar {
+          display: none; /* Chrome, Safari */
+        }
+
+        .carousel-section .card {
+          flex: 0 0 340px;
+          height: 380px;
+          background: #fff;
+          border-radius: 20px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1),
+            height 0.4s cubic-bezier(0.4, 2, 0.6, 1), z-index 0s;
+          position: relative;
+          overflow: hidden;
+          padding: 20px;
+          color: white;
+          z-index: 1;
+        }
+
+        .carousel-section .carousel-inner {
+          perspective: 1200px;
+        }
+
+        .carousel-section .card:hover {
+          transform: scale(1);
+          height: 430px;
+          z-index: 10;
+        }
+
+        .carousel-section .card:not(:hover) {
+          z-index: 1;
+        }
+
+        .carousel-section .card:hover h3 {
+          display: none;
+        }
+
+        .carousel-section .card svg {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 15px;
+          fill: white;
+        }
+
+        .carousel-section .card img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+          z-index: 0;
+        }
+
+        .carousel-section .card h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-top: 240px;
+          text-align: center;
+          z-index: 1;
+          color: white;
+        }
+
+        .carousel-section .card-content {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          padding: 0 20px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: 2;
+        }
+
+        .carousel-section .card:hover .card-content {
+          opacity: 1;
+        }
+
+        .carousel-section .card-content p {
+          font-size: 1.05rem;
+          margin-bottom: 10px;
+        }
+
+        .carousel-section .card-content button {
+          background: #ffffff;
+          color: #333;
+          border: none;
+          padding: 12px 18px;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .carousel-section .card-content button:hover {
+          background: #f4f4f4;
+        }
+
+        .carousel-section .bg1 {
+          background: #2e7d32;
+        }
+        .carousel-section .bg2 {
+          background: #6a1b9a;
+        }
+        .carousel-section .bg3 {
+          background: #0277bd;
+        }
+        .carousel-section .bg4 {
+          background: #f9a825;
+        }
+        .carousel-section .bg5 {
+          background: #c62828;
+        }
+        .carousel-section .bg6 {
+          background: #1565c0;
+        }
+        .carousel-section .bg7 {
+          background: #ef6c00;
+        }
+        .carousel-section .bg8 {
+          background: #ad1457;
+        }
+
+        .carousel-section .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 50%;
+          font-size: 28px;
+          cursor: pointer;
+          z-index: 20;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.3s;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-section .left-arrow {
+          left: -10px;
+        }
+
+        .carousel-section .right-arrow {
+          right: -10px;
+        }
+
+        .carousel-section .arrow:hover {
+          background: rgba(255, 255, 255, 1);
+        }
+
+        @media (max-width: 1200px) {
+          .carousel-section .card {
+            flex: 0 0 280px;
+            height: 300px;
+          }
+          .carousel-section .card:hover {
+            height: 350px;
+          }
+          .carousel-section .card svg {
+            width: 60px;
+            height: 60px;
+          }
+          .carousel-section .card h3 {
+            font-size: 1.2rem;
+            margin-top: 200px;
+          }
+          .carousel-section .card-content p {
+            font-size: 0.95rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .carousel-section .card {
+            flex: 0 0 220px;
+            height: 260px;
+          }
+
+          .carousel-section .card:hover {
+            height: 320px;
+          }
+
+          .carousel-section .card svg {
+            width: 50px;
+            height: 50px;
+          }
+
+          .carousel-section .card h3 {
+            font-size: 1rem;
+            margin-top: 140px;
+          }
+
+          .carousel-section .card-content p {
+            font-size: 0.85rem;
+          }
+
+          .carousel-section .arrow {
+            display: none;
+          }
+        }
+      </style>
+
+      <section
+        class="service_section section_space"
+        style="padding: 10px; margin-bottom: 70px"
+      >
+        <div class="top_title">
+          <h2>OUR BEST SERVICES</h2>
+          <h3>Empowering Communities Through Real, Measurable Impact</h3>
+
+          <div class="carousel-section">
+            <div class="carousel-wrapper">
+              <div class="arrow left-arrow" onclick="scrollCarousel(-1)">
+                &#10094;
+              </div>
+              <div class="carousel">
+                <!-- Service 1 -->
+                <div class="card bg1">
+                  <img
+                    src="assets/images/services/skill-training.jpg"
+                    alt="Skill Development Training"
+                  />
+                  <h3>Skill Development</h3>
+                  <div class="card-content">
+                    <p>
+                      Training in handloom weaving, tailoring, embroidery, and
+                      printing for youth and women to gain employable skills.
+                    </p>
+                    <button>Learn More</button>
+                  </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card bg2">
+                  <img
+                    src="assets/images/services/medical-camp.jpg"
+                    alt="Healthcare Camps"
+                  />
+                  <h3>Medical Camps</h3>
+                  <div class="card-content">
+                    <p>
+                      Free general and eye checkups in rural SC/ST villages in
+                      collaboration with healthcare institutions.
+                    </p>
+                    <button>Learn More</button>
+                  </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card bg3">
+                  <img
+                    src="assets/images/services/environment.jpg"
+                    alt="Environmental Initiatives"
+                  />
+                  <h3>Environment</h3>
+                  <div class="card-content">
+                    <p>
+                      Tree planting, river palm seed sowing, and “Meendum
+                      Manjappai” awareness for sustainable living.
+                    </p>
+                    <button>Learn More</button>
+                  </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card bg4">
+                  <img
+                    src="assets/images/services/women-empowerment.jpg"
+                    alt="Women Empowerment Workshops"
+                  />
+                  <h3>Women Empowerment</h3>
+                  <div class="card-content">
+                    <p>
+                      Jewelry making, fashion design, and entrepreneurship
+                      workshops to boost financial independence.
+                    </p>
+                    <button>Learn More</button>
+                  </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="card bg5">
+                  <img
+                    src="assets/images/services/child-support.jpg"
+                    alt="Child Welfare"
+                  />
+                  <h3>Education Support</h3>
+                  <div class="card-content">
+                    <p>
+                      School kits and career awareness (sericulture, handloom,
+                      health & hygiene) for rural youth.
+                    </p>
+                    <button>Learn More</button>
+                  </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="card bg6">
+                  <img
+                    src="assets/images/services/market-access.jpg"
+                    alt="Market Linkage"
+                  />
+                  <h3>Market Access</h3>
+                  <div class="card-content">
+                    <p>
+                      Helping SHGs sell handmade goods directly at expos,
+                      bypassing middlemen to increase profit.
+                    </p>
+                    <button>Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <div class="arrow right-arrow" onclick="scrollCarousel(1)">
+                &#10095;
               </div>
             </div>
           </div>
 
-          <div class="row">
-            <!-- Service 1: Skill Development Training -->
-            <div
-              class="col col-xl-4 col-lg-6 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1000ms"
-            >
-              <div class="service_card">
-                <div class="image">
-                  <div class="round">
-                    <img
-                      src="assets/images/services/skill-training.jpg"
-                      alt="Skill Development Training"
-                      style="height: 220px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <h2>
-                    <a href="services-single.html"
-                      >Skill Development Training</a
-                    >
-                  </h2>
-                  <div class="icon_text">
-                    <div class="icon">
-                      <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <p>
-                      Providing vocational training in handloom weaving,
-                      tailoring, hand embroidery, and printing, empowering youth
-                      and women for self-employment and industry placement.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service 2: Healthcare Camps -->
-            <div
-              class="col col-xl-4 col-lg-6 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1200ms"
-            >
-              <div class="service_card">
-                <div class="image">
-                  <div class="round">
-                    <img
-                      src="assets/images/services/medical-camp.jpg"
-                      alt="Healthcare Camps"
-                      style="height: 220px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <h2><a href="services-single.html">Healthcare Camps</a></h2>
-                  <div class="icon_text">
-                    <div class="icon"><i class="fas fa-stethoscope"></i></div>
-                    <p>
-                      Organizing free general and eye medical camps in
-                      underserved villages, especially for SC/ST communities, in
-                      partnership with healthcare institutions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service 3: Environmental Sustainability -->
-            <div
-              class="col col-xl-4 col-lg-6 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1400ms"
-            >
-              <div class="service_card">
-                <div class="image">
-                  <div class="round">
-                    <img
-                      src="assets/images/services/environment.jpg"
-                      alt="Environmental Initiatives"
-                      style="height: 220px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <h2>
-                    <a href="services-single.html">Environmental Initiatives</a>
-                  </h2>
-                  <div class="icon_text">
-                    <div class="icon"><i class="fas fa-leaf"></i></div>
-                    <p>
-                      Leading tree plantations, palm seed sowing along
-                      riverbanks, and "Meendum Manjappai" cloth bag awareness
-                      campaigns to promote eco-conscious behavior.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service 4: Women Empowerment Workshops -->
-            <div
-              class="col col-xl-4 col-lg-6 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1600ms"
-            >
-              <div class="service_card">
-                <div class="image">
-                  <div class="round">
-                    <img
-                      src="assets/images/services/women-empowerment.jpg"
-                      alt="Women Empowerment Workshops"
-                      style="height: 220px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <h2><a href="services-single.html">Women Empowerment</a></h2>
-                  <div class="icon_text">
-                    <div class="icon"><i class="fas fa-female"></i></div>
-                    <p>
-                      Conducting jewelry making, fashion design, and
-                      entrepreneurship workshops for women and SC communities to
-                      promote financial independence.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service 5: Youth & Education Support -->
-            <div
-              class="col col-xl-4 col-lg-6 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1800ms"
-            >
-              <div class="service_card">
-                <div class="image">
-                  <div class="round">
-                    <img
-                      src="assets/images/services/child-support.jpg"
-                      alt="Child Welfare and Education"
-                      style="height: 220px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <h2>
-                    <a href="services-single.html">Youth & Education Support</a>
-                  </h2>
-                  <div class="icon_text">
-                    <div class="icon"><i class="fas fa-child"></i></div>
-                    <p>
-                      Supporting school children with educational kits and
-                      awareness on health, hygiene, and career opportunities
-                      like sericulture and handloom arts.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service 6: Exhibition & Direct Market Linkage -->
-            <div
-              class="col col-xl-4 col-lg-6 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1900ms"
-            >
-              <div class="service_card">
-                <div class="image">
-                  <div class="round">
-                    <img
-                      src="assets/images/services/market-access.jpg"
-                      alt="Exhibition and Market Access"
-                      style="height: 220px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <h2><a href="services-single.html">Market Linkage</a></h2>
-                  <div class="icon_text">
-                    <div class="icon"><i class="fas fa-store-alt"></i></div>
-                    <p>
-                      Organizing exhibitions for self-help groups to showcase
-                      and sell handmade products directly—removing
-                      intermediaries and increasing profits.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div style="display: flex; justify-content: center; margin-top: 64px">
+            <button class="btn_primary">
+              Visit Our Service page <i class="ti-arrow-right"></i>
+            </button>
           </div>
-        </div>
-
-        <!-- Decorative Shapes -->
-        <div class="shape-01">
-          <img src="assets/images/service/shape-1.png" alt="Decorative Shape" />
-        </div>
-        <div class="shape-02">
-          <img src="assets/images/service/shape-3.png" alt="Decorative Shape" />
-        </div>
-        <div class="shape-03">
-          <img src="assets/images/service/shape-2.png" alt="Decorative Shape" />
         </div>
       </section>
+
+      <script>
+        function scrollCarousel(direction) {
+          const carousel = document.querySelector(".carousel");
+          const scrollAmount = 360; // adjust if needed
+          carousel.scrollBy({
+            left: direction * scrollAmount,
+            behavior: "smooth",
+          });
+        }
+      </script>
 
       <!-- ==== Service Section End ==== -->
 
@@ -1057,74 +1311,118 @@
       </section>
 
       <!-- ==== testimonil start ==== -->
-      <section class="testimonil_section section_space">
+      <section class="testimonial_section section_space">
         <div class="container">
-          <div class="testimonil_wrap">
-            <div class="left_img">
-              <img src="aaaaaaa/1.jpg" alt="Community Member" />
+          <div class="text-center mb-4">
+            <h2 class="section-title">What People Say About Us</h2>
+            <p class="section-subtitle">
+              Real stories from those we've impacted.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="testimonial_card">
+                <h4>
+                  "Sapphire Blue Social Trust has transformed our community.
+                  Their programs bring hope and real change to marginalized
+                  families."
+                </h4>
+                <h3>Anonymous</h3>
+                <span>Program Beneficiary</span>
+              </div>
             </div>
-            <div class="content">
-              <h2>Client Reviews:</h2>
 
-              <!-- Testimonial 1 -->
-              <h4>
-                "Sapphire Blue Social Trust has transformed our community. Their
-                programs bring hope and real change to marginalized families."
-              </h4>
-              <!-- <div class="image">
-                <img src="aaaaaaa/review.png" alt="Quote Icon" />
-                <span>MORE +</span>
-              </div> -->
-              <h3>Anonymous</h3>
-              <span>Program Beneficiary</span>
-
-              <!-- Testimonial 2 -->
-              <div class="testimonial_block">
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="testimonial_card">
                 <h4>
                   "Thanks to the free embroidery training, I now run my own
                   small business from home. The trainers were so kind and
                   professional."
                 </h4>
-                <!-- <div class="image">
-                  <img src="aaaaaaa/review.png" alt="Quote Icon" />
-                  <span>MORE +</span>
-                </div> -->
                 <h3>Meenakshi</h3>
                 <span>SC Woman Entrepreneur, Dharmapuri</span>
               </div>
+            </div>
 
-              <!-- Testimonial 3 -->
-              <div class="testimonial_block">
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="testimonial_card">
                 <h4>
                   "Our school received study kits and free eye check-ups for
                   kids. It made a big difference in their education and
                   confidence."
                 </h4>
-
                 <h3>Govindaraj</h3>
                 <span>Parent from Erode District</span>
               </div>
-              <br />
-              <div class="image">
-                <img src="aaaaaaa/review.png" alt="Quote Icon" />
-                <span>MORE +</span>
-              </div>
-            </div>
-
-            <div class="shape-1">
-              <img
-                src="assets/images/testimonil/shape.png"
-                alt="Decorative Shape"
-              />
-            </div>
-            <div class="shape-2">
-              <img
-                src="assets/images/testimonil/shape-2.png"
-                alt="Decorative Shape"
-              />
             </div>
           </div>
         </div>
+
+        <style>
+          .testimonial_section {
+            background-color: #f6faff;
+            padding: 4em 0;
+            padding-bottom: 100px;
+          }
+
+          .section-title {
+            font-size: 2em;
+            font-weight: 700;
+          }
+
+          .section-subtitle {
+            font-size: 1.1em;
+            color: #666;
+          }
+
+          .testimonial_card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5em;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+          }
+
+          .testimonial_card:hover {
+            transform: translateY(-5px);
+          }
+
+          .testimonial_card h4 {
+            font-size: 1em;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 1em;
+          }
+
+          .testimonial_card h3 {
+            font-size: 1.1em;
+            margin-bottom: 0.2em;
+            color: #1a2d4d;
+          }
+
+          .testimonial_card span {
+            font-size: 0.9em;
+            color: #777;
+          }
+
+          @media (max-width: 768px) {
+            .testimonial_card {
+              padding: 1.2em;
+            }
+
+            .section-title {
+              font-size: 1.5em;
+            }
+          }
+        </style>
       </section>
 
       <!-- ==== project start ==== -->
@@ -2052,7 +2350,7 @@
         </div>
       </section>
 
-      <!-- ==== footer start ==== -->
+      <!-- ==== footer starts ====  -->
       <section class="footer_section">
         <div class="footer_top">
           <div class="container">
@@ -2104,62 +2402,14 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog.html">Latest News</a></li>
                     <li><a href="causes-single.html">Donate</a></li>
+                    <li><a href="our-gallery.html">Our Gallery</a></li>
                   </ul>
                 </div>
               </div>
 
               <!-- Gallery Widget -->
-              <div class="col-lg-3 col-md-6 col-12">
-                <div class="widget_column widget_instagram">
-                  <h2>Our Gallery</h2>
-                  <ul
-                    style="
-                      display: grid;
-                      grid-template-columns: repeat(3, 80px);
-                      gap: 10px;
-                    "
-                  >
-                    <li>
-                      <img
-                        src="assets/images/gallery/1.jpg"
-                        alt="Gallery Image 1"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="assets/images/gallery/2.jpg"
-                        alt="Gallery Image 2"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="assets/images/gallery/3.jpg"
-                        alt="Gallery Image 3"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="assets/images/gallery/4.jpg"
-                        alt="Gallery Image 4"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="assets/images/gallery/5.jpg"
-                        alt="Gallery Image 5"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="assets/images/gallery/6.jpg"
-                        alt="Gallery Image 6"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="mobile-only-space" style="height: 30px"></div>
+              <!-- <div class="mobile-only-space" style="height: 30px"></div> -->
 
               <!-- Contact Widget -->
               <div class="col-lg-3 col-md-6 col-12">
