@@ -582,60 +582,15 @@
       <section class="about_section">
         <div class="container">
           <div class="row align-items-center">
-            <!-- Left: Images -->
+            <!-- Right: Content Only, Full Width on Mobile -->
             <div
-              class="col-lg-6 col-12 wow fadeInLeftSlow"
+              class="col-lg-12 col-12 wow fadeInRightSlow"
               data-wow-duration="1700ms"
             >
-              <div class="image">
-                <div
-                  class="about_img-1"
-                  style="
-                    border: 5px solid white;
-                    border-radius: 30px;
-                    overflow: hidden;
-                  "
-                >
-                  <img
-                    src="assets/images/about/women-empowerment.jpg"
-                    alt="Skill Development Training at SBST"
-                  />
-                </div>
-                <div
-                  class="about_img-2"
-                  style="
-                    border: 5px solid white;
-                    border-radius: 30px;
-                    overflow: hidden;
-                  "
-                >
-                  <img
-                    src="assets/images/about/medical-camp.jpg"
-                    alt="Medical Camp for Rural Communities"
-                  />
-                </div>
-                <div
-                  class="about_img-3"
-                  style="
-                    border: 5px solid white;
-                    border-radius: 30px;
-                    overflow: hidden;
-                  "
-                >
-                  <img
-                    src="assets/images/causes/health-camp.png"
-                    alt="Community Impact Icon"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Right: Content -->
-            <div
-              class="col-lg-6 col-12 wow fadeInRightSlow"
-              data-wow-duration="1700ms"
-            >
-              <div class="content">
+              <div
+                class="content"
+                style="padding: 2em 0; max-width: 1000px; margin: 0 auto"
+              >
                 <div class="top_title">
                   <h2>ABOUT US</h2>
                   <h3>
@@ -651,44 +606,25 @@
                   </p>
                 </div>
 
-                <div class="text_qua">
-                  <div class="image">
-                    <img
-                      src="assets/images/about/women-empowerment.jpg"
-                      alt="Empowering Women and Artisans"
-                    />
-                  </div>
-                  <div class="text">
-                    <img
-                      src="assets/images/about/chat.png"
-                      alt="Community Dialogue Icon"
-                    />
-                    <p>
-                      With programs like SAMARTH handloom training, Meendum
-                      Manjappai awareness, tree plantation, and KKT textile
-                      training, we’ve reached thousands—helping them access
-                      jobs, launch businesses, and live healthier lives.
-                    </p>
-                  </div>
+                <div class="mb-3" style="font-size: 1.08em; color: #444">
+                  With programs like SAMARTH handloom training, Meendum
+                  Manjappai awareness, tree plantation, and KKT textile
+                  training, we’ve reached thousands—helping them access jobs,
+                  launch businesses, and live healthier lives.
                 </div>
 
-                <ul>
+                <ul style="list-style: disc; padding-left: 1.3em">
                   <li>
-                    <img
-                      src="assets/images/about/c3.png"
-                      alt="Registration Badge Icon"
-                    />
                     Registered under Indian Trust Act & FCRA-approved to receive
                     global support.
                   </li>
                   <li>
-                    <img src="assets/images/about/c4.png" alt="Mission Icon" />
                     Championing community-driven change through training,
                     healthcare, and awareness.
                   </li>
                 </ul>
 
-                <div class="about_btn">
+                <div class="about_btn mt-4">
                   <a href="about.html" class="btn_primary">
                     Learn More <i class="ti-arrow-right"></i>
                   </a>
@@ -697,13 +633,23 @@
             </div>
           </div>
         </div>
-
-        <div class="shape">
-          <img
-            src="assets/images/about/paint.png"
-            alt="Decorative Paint Shape"
-          />
-        </div>
+        <style>
+          @media (max-width: 991px) {
+            .about_section .content {
+              padding: 1.2em 0.5em !important;
+              max-width: 100% !important;
+            }
+          }
+          @media (max-width: 600px) {
+            .about_section .top_title h2,
+            .about_section .top_title h3 {
+              font-size: 1.2em !important;
+            }
+            .about_section .content {
+              font-size: 0.98em !important;
+            }
+          }
+        </style>
       </section>
 
       <!-- ==== Service Section Start ==== -->
