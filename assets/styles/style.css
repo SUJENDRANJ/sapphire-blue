@@ -723,7 +723,7 @@ img {
 /* header_section */
 /* header_top */
 .header_top {
-  background: #51f56a;
+  background: linear-gradient(90deg, #2378f0 0%, #3df650 100%);
   padding-left: 150px;
 }
 @media (max-width: 1599px) {
