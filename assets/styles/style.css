@@ -739,6 +739,7 @@ img {
     text-align: center;
   }
 }
+
 .header_top .contacr_info ul li {
   color: #1a1c4d;
   font-family: Sen;
@@ -754,16 +755,17 @@ img {
     padding: 0;
   }
 }
+
 .header_top .contacr_info ul li:last-child {
   padding-right: 0;
 }
 .header_top .contacr_info .number {
-  color: #4c4848;
+  color: #4bff72;
   font-size: 16px;
   font-family: "Rubik", sans-serif;
 }
 .header_top .contacr_info .number span {
-  color: #8139e7;
+  color: #ffffff;
 }
 .header_top .contacr_right {
   text-align: right;
@@ -1451,7 +1453,7 @@ img {
 @media (max-width: 767px) {
   .hero_slider .hero_slider_item,
   .header_section_s4 .hero_slider_item {
-    height: 600px;
+    height: 900px;
   }
 }
 @media (max-width: 575px) {
@@ -2477,6 +2479,11 @@ img {
 .footer_section_s2 .footer_top,
 .footer_section_s3 .footer_top {
   padding: 90px 0;
+}
+
+.footer_section .footer_top .container {
+  display: flex;
+  justify-content: start;
 }
 
 @media (max-width: 991px) {

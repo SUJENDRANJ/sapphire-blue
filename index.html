@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 
     <link
@@ -114,6 +123,8 @@
                     <li><a href="blog.html">Blogs</a></li>
 
                     <li><a href="contact.html">contact</a></li>
+
+                    <li><a href="our-gallery.html">our gallery</a></li>
                   </ul>
                 </div>
               </div>
@@ -475,6 +486,8 @@
         </div>
       </section>
 
+      <!-- ==== Service Section Start ==== -->
+
       <!-- ==== features start ==== -->
       <section class="features_section">
         <div class="container">
@@ -579,545 +592,764 @@
         </div>
       </section>
 
-      <section class="about_section">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Content Column -->
-            <div
-              class="col-lg-12 col-12 wow fadeInRightSlow"
-              data-wow-duration="1700ms"
-            >
-              <div
-                class="content"
-                style="padding: 2em 0; max-width: 1000px; margin: 0 auto"
-              >
-                <div class="top_title">
-                  <h2>ABOUT US</h2>
-                  <h3>
-                    Transforming Lives Through Skill, Health & Sustainability
-                  </h3>
-                  <p>
-                    Sapphire Blue Social Trust (SBST) is a registered non-profit
-                    organization dedicated to empowering marginalized
-                    communities across Tamil Nadu. We focus on skill
-                    development, sustainable livelihoods, healthcare outreach,
-                    and women’s empowerment—especially in underserved rural and
-                    SC/ST areas.
-                  </p>
-                </div>
+      <!-- ==== Service Section End ==== -->
 
-                <div class="mb-3" style="font-size: 1.08em; color: #444">
-                  With programs like SAMARTH handloom training, Meendum
-                  Manjappai awareness, tree plantation, and KKT textile
-                  training, we’ve reached thousands—helping them access jobs,
-                  launch businesses, and live healthier lives.
-                </div>
-
-                <ul style="list-style: disc; padding-left: 1.3em">
-                  <li>
-                    Registered under Indian Trust Act & FCRA-approved to receive
-                    global support.
-                  </li>
-                  <li>
-                    Championing community-driven change through training,
-                    healthcare, and awareness.
-                  </li>
-                </ul>
-
-                <!-- New: Highlights / Images Section -->
-                <div class="highlight-section mt-5">
-                  <div class="row g-4">
-                    <!-- Box 1 -->
-                    <div class="col-md-4 col-sm-12">
-                      <div class="highlight-box">
-                        <img
-                          src="./aaaaaaa/birthday.png"
-                          alt="Skill Training"
-                        />
-                        <h4>About person 1</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Praesentium hic nemo rem labore! Enim cumque
-                          libero cum illum fuga, quisquam doloremque dolor id
-                          rerum!
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Box 2 -->
-                    <div class="col-md-4 col-sm-12">
-                      <div class="highlight-box">
-                        <img
-                          src="./aaaaaaa/birthday.png"
-                          alt="Skill Training"
-                        />
-                        <h4>About person 2</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Praesentium hic nemo rem labore! Enim cumque
-                          libero cum illum fuga, quisquam doloremque dolor id
-                          rerum!
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Box 3 -->
-                    <div class="col-md-4 col-sm-12">
-                      <div class="highlight-box">
-                        <img
-                          src="./aaaaaaa/birthday.png"
-                          alt="Skill Training"
-                        />
-                        <h4>About person 3</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Praesentium hic nemo rem labore! Enim cumque
-                          libero cum illum fuga, quisquam doloremque dolor id
-                          rerum!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="about_btn mt-5">
-                  <a href="about.html" class="btn_primary">
-                    Learn More <i class="ti-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <style>
-          .highlight-box {
-            background: #f9f9f9;
-            border-radius: 12px;
-            box-shadow: 10px 14px 12px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            text-align: center;
-            padding: 1em;
-            transition: transform 0.3s;
-            height: 100%;
-          }
-
-          .highlight-box img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-          }
-
-          .highlight-box h4 {
-            font-size: 1.2em;
-            font-weight: 600;
-            margin-bottom: 10px;
-          }
-
-          .highlight-box p {
-            font-size: 0.95em;
-            color: #555;
-          }
-
-          .highlight-box:hover {
-            transform: translateY(-5px);
-          }
-
-          @media (max-width: 991px) {
-            .about_section .content {
-              padding: 1.2em 0.5em !important;
-              max-width: 100% !important;
-            }
-
-            .highlight-box img {
-              height: 180px;
-            }
-          }
-
-          @media (max-width: 600px) {
-            .about_section .top_title h2,
-            .about_section .top_title h3 {
-              font-size: 1.2em !important;
-            }
-
-            .about_section .content {
-              font-size: 0.98em !important;
-            }
-
-            .highlight-box {
-              padding: 1em 0.6em;
-            }
-
-            .highlight-box img {
-              height: 160px;
-            }
-          }
-        </style>
-      </section>
-
-      <!-- ==== Service Section Start ==== -->
+      <!-- ==== blog start ==== -->
       <style>
-        .carousel-section .carousel-wrapper {
-          overflow: hidden;
-          width: 100%;
-          padding-top: 60px;
-          position: relative;
-          margin: 0;
-        }
-
-        .carousel-section .carousel {
+        .custom-arrow {
+          width: 50px;
+          height: 50px;
+          background-color: #ffffff;
+          border-radius: 100%;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          color: black;
+          position: absolute;
+          top: 50%;
+          z-index: 20;
+          transform: translateY(-50%);
           display: flex;
-          gap: 20px;
-          overflow-x: auto;
-          scroll-behavior: smooth;
-          scrollbar-width: none; /* Firefox */
-        }
-        .carousel-section .carousel::-webkit-scrollbar {
-          display: none; /* Chrome, Safari */
-        }
-
-        .carousel-section .card {
-          flex: 0 0 340px;
-          height: 380px;
-          background: #fff;
-          border-radius: 20px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1),
-            height 0.4s cubic-bezier(0.4, 2, 0.6, 1), z-index 0s;
-          position: relative;
+          transition: all 0.4s ease;
+          cursor: pointer;
+          font-size: 22px;
           overflow: hidden;
-          padding: 20px;
-          color: white;
-          z-index: 1;
         }
 
-        .carousel-section .carousel-inner {
-          perspective: 1200px;
+        /* Remove any 'aspect-ratio' — not needed, causes oval on some browsers */
+        .custom-arrow::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          font-size: 20px;
+          transition: transform 0.3s ease;
+          color: black;
         }
 
-        .carousel-section .card:hover {
-          transform: scale(1);
-          height: 430px;
-          z-index: 10;
+        .swiper-button-prev.custom-arrow {
+          left: 0px;
         }
 
-        .carousel-section .card:not(:hover) {
-          z-index: 1;
+        .swiper-button-next.custom-arrow {
+          right: 0px;
         }
 
-        .carousel-section .card:hover h3 {
+        /* Hover effect */
+        .custom-arrow:hover {
+          transform: translateY(-50%) scale(1.1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Remove default Swiper arrow content */
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
           display: none;
         }
 
-        .carousel-section .card svg {
-          width: 80px;
-          height: 80px;
-          margin-bottom: 15px;
-          fill: white;
+        /* Set icons */
+        .swiper-button-prev.custom-arrow::before {
+          content: "\f104"; /* ← */
         }
 
-        .carousel-section .card img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
+        .swiper-button-next.custom-arrow::before {
+          content: "\f105"; /* → */
+        }
+
+        .custom-arrow:hover::before {
+          transform: scale(1.2);
+        }
+
+        .blog-card img {
+          max-height: 210px;
           object-fit: cover;
-          border-radius: 20px;
-          z-index: 0;
-        }
-
-        .carousel-section .card h3 {
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-top: 240px;
-          text-align: center;
-          z-index: 1;
-          color: white;
-        }
-
-        .carousel-section .card-content {
-          position: absolute;
-          bottom: 20px;
-          left: 0;
-          right: 0;
-          padding: 0 20px;
-          text-align: center;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-          z-index: 2;
-        }
-
-        .carousel-section .card:hover .card-content {
-          opacity: 1;
-        }
-
-        .carousel-section .card-content p {
-          font-size: 1.05rem;
-          margin-bottom: 10px;
-        }
-
-        .carousel-section .card-content button {
-          background: #ffffff;
-          color: #333;
-          border: none;
-          padding: 12px 18px;
-          border-radius: 8px;
-          font-weight: bold;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-
-        .carousel-section .card-content button:hover {
-          background: #f4f4f4;
-        }
-
-        .carousel-section .bg1 {
-          background: #2e7d32;
-        }
-        .carousel-section .bg2 {
-          background: #6a1b9a;
-        }
-        .carousel-section .bg3 {
-          background: #0277bd;
-        }
-        .carousel-section .bg4 {
-          background: #f9a825;
-        }
-        .carousel-section .bg5 {
-          background: #c62828;
-        }
-        .carousel-section .bg6 {
-          background: #1565c0;
-        }
-        .carousel-section .bg7 {
-          background: #ef6c00;
-        }
-        .carousel-section .bg8 {
-          background: #ad1457;
-        }
-
-        .carousel-section .arrow {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.8);
-          border-radius: 50%;
-          font-size: 28px;
-          cursor: pointer;
-          z-index: 20;
-          width: 50px;
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: background 0.3s;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .carousel-section .left-arrow {
-          left: -10px;
-        }
-
-        .carousel-section .right-arrow {
-          right: -10px;
-        }
-
-        .carousel-section .arrow:hover {
-          background: rgba(255, 255, 255, 1);
-        }
-
-        @media (max-width: 1200px) {
-          .carousel-section .card {
-            flex: 0 0 280px;
-            height: 300px;
-          }
-          .carousel-section .card:hover {
-            height: 350px;
-          }
-          .carousel-section .card svg {
-            width: 60px;
-            height: 60px;
-          }
-          .carousel-section .card h3 {
-            font-size: 1.2rem;
-            margin-top: 200px;
-          }
-          .carousel-section .card-content p {
-            font-size: 0.95rem;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .carousel-section .card {
-            flex: 0 0 220px;
-            height: 260px;
-          }
-
-          .carousel-section .card:hover {
-            height: 320px;
-          }
-
-          .carousel-section .card svg {
-            width: 50px;
-            height: 50px;
-          }
-
-          .carousel-section .card h3 {
-            font-size: 1rem;
-            margin-top: 140px;
-          }
-
-          .carousel-section .card-content p {
-            font-size: 0.85rem;
-          }
-
-          .carousel-section .arrow {
-            display: none;
-          }
         }
       </style>
 
-      <section
-        class="service_section section_space"
-        style="padding: 10px; margin-bottom: 70px"
-      >
-        <div class="top_title">
-          <h2>OUR BEST SERVICES</h2>
-          <h3>Empowering Communities Through Real, Measurable Impact</h3>
-
-          <div class="carousel-section">
-            <div class="carousel-wrapper">
-              <div class="arrow left-arrow" onclick="scrollCarousel(-1)">
-                &#10094;
-              </div>
-              <div class="carousel">
-                <!-- Service 1 -->
-                <div class="card bg1">
-                  <img
-                    src="assets/images/services/skill-training.jpg"
-                    alt="Skill Development Training"
-                  />
-                  <h3>Skill Development</h3>
-                  <div class="card-content">
-                    <p>
-                      Training in handloom weaving, tailoring, embroidery, and
-                      printing for youth and women to gain employable skills.
-                    </p>
-                    <button>Learn More</button>
-                  </div>
+      <section class="blog_section_s5 section_space">
+        <div class="container">
+          <div class="row">
+            <div class="top_title">
+              <div class="row">
+                <div class="col-12">
+                  <h2>INSIDE SBST INITIATIVES</h2>
+                  <h3>Latest Activities & Field Experiences</h3>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="card bg2">
-                  <img
-                    src="assets/images/services/medical-camp.jpg"
-                    alt="Healthcare Camps"
-                  />
-                  <h3>Medical Camps</h3>
-                  <div class="card-content">
-                    <p>
-                      Free general and eye checkups in rural SC/ST villages in
-                      collaboration with healthcare institutions.
-                    </p>
-                    <button>Learn More</button>
-                  </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="card bg3">
-                  <img
-                    src="assets/images/services/environment.jpg"
-                    alt="Environmental Initiatives"
-                  />
-                  <h3>Environment</h3>
-                  <div class="card-content">
-                    <p>
-                      Tree planting, river palm seed sowing, and “Meendum
-                      Manjappai” awareness for sustainable living.
-                    </p>
-                    <button>Learn More</button>
-                  </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="card bg4">
-                  <img
-                    src="assets/images/services/women-empowerment.jpg"
-                    alt="Women Empowerment Workshops"
-                  />
-                  <h3>Women Empowerment</h3>
-                  <div class="card-content">
-                    <p>
-                      Jewelry making, fashion design, and entrepreneurship
-                      workshops to boost financial independence.
-                    </p>
-                    <button>Learn More</button>
-                  </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="card bg5">
-                  <img
-                    src="assets/images/services/child-support.jpg"
-                    alt="Child Welfare"
-                  />
-                  <h3>Education Support</h3>
-                  <div class="card-content">
-                    <p>
-                      School kits and career awareness (sericulture, handloom,
-                      health & hygiene) for rural youth.
-                    </p>
-                    <button>Learn More</button>
-                  </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="card bg6">
-                  <img
-                    src="assets/images/services/market-access.jpg"
-                    alt="Market Linkage"
-                  />
-                  <h3>Market Access</h3>
-                  <div class="card-content">
-                    <p>
-                      Helping SHGs sell handmade goods directly at expos,
-                      bypassing middlemen to increase profit.
-                    </p>
-                    <button>Learn More</button>
-                  </div>
-                </div>
-              </div>
-              <div class="arrow right-arrow" onclick="scrollCarousel(1)">
-                &#10095;
               </div>
             </div>
           </div>
-
-          <div style="display: flex; justify-content: center; margin-top: 64px">
-            <button class="btn_primary">
-              Visit Our Service page <i class="ti-arrow-right"></i>
-            </button>
+          <h1>2025</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/sc-women-support.jpg"
+                        alt="SC Women Empowerment"
+                      />
+                      <span>SC SUPPORT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Jan 05, 2025</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Entrepreneurship Training for SC Community Women</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Jan 23, 2025</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Eye Camp at Vellivalasu for SC Villagers</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Feb 12, 2025</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Creative Handicraft Workshop for Students</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>SKILL DEVELOPMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Feb 29, 2025</span>
+                      <h2>
+                        <a href="blog.html"
+                          >KKT Advanced Tailoring & Printing Training</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+            </div>
+          </div>
+          <h1>2024</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/handloom-training.jpg"
+                        alt="Skill Training Program"
+                      />
+                      <span>TRAINING</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, April 01, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Empowering Women Through Handloom Training</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/medical-camp.jpg"
+                        alt="Medical Camp"
+                      />
+                      <span>HEALTHCARE</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, May 19, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Serving Remote Villages with Free Medical Camps</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, May 17, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Planting 1500 Palm Seeds Along River Cauvery</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/yellow-bag-campaign.jpg"
+                        alt="Meendum Manjappai Awareness"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Aug 28, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Cloth Bag Distribution for Plastic-Free Awareness</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--5-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kabaddi-match.jpg"
+                        alt="Kabaddi Match"
+                      />
+                      <span>SPORTS</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Sept 2, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >District-Level Kabaddi Match for Youth</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--6-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/embroidery-training.jpg"
+                        alt="Hand Embroidery Training"
+                      />
+                      <span>WOMEN EMPOWERMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Sept 21, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Free Hand Embroidery Training for Women</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--7-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/shg-exhibition.jpg"
+                        alt="SHG Exhibition"
+                      />
+                      <span>EXHIBITION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Oct 13, 2024</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Empowering Women SHGs Through Direct Sales</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+            </div>
+          </div>
+          <h1>2023</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Health and Hygiene Awareness Program</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION & TRAINING</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Hands-on Training for Hand Block Printing
+                        </a>
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>WOMEN EMPOWERMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Jewellery Making Workshop for Women</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog.html">Prevent Tress in Road Side</a>
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+            </div>
+          </div>
+          <h1>2022</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/sc-women-support.jpg"
+                        alt="SC Women Empowerment"
+                      />
+                      <span>SC SUPPORT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog-single.html"
+                          >Training for Silk Handloom weaving
+                        </a>
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Covid Vaccinations Camps at Erode</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Distribute Stationary items for Students</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>SKILL DEVELOPMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html">Pattern making and Tailoring</a>
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--5-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Prevent People from Dengue and Malaria</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+            </div>
+          </div>
+          <h1>2021</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/sc-women-support.jpg"
+                        alt="SC Women Empowerment"
+                      />
+                      <span>SC SUPPORT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog-single.html"
+                          >Entrepreneurship Training for SC Community Women</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Free Ambulance Service During Covid Lockdown</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Creative Handicraft Workshop for Students</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>Women Empowerment</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html"
+                          >KKT Advanced Tailoring & Printing Training</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+                <!--5-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog.html"
+                          >Planting 5000 Palm Seeds Along River Cauvery</a
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                "
+              ></div>
+            </div>
           </div>
         </div>
       </section>
-
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script>
-        function scrollCarousel(direction) {
-          const carousel = document.querySelector(".carousel");
-          const scrollAmount = 360; // adjust if needed
-          carousel.scrollBy({
-            left: direction * scrollAmount,
-            behavior: "smooth",
-          });
-        }
-      </script>
+        new Swiper(".card-wrapper", {
+          // Optional parameters
 
-      <!-- ==== Service Section End ==== -->
+          //loop: true,
+          spaceBetween: 20,
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          //Responsive breakpoints
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+        });
+      </script>
 
       <!-- ==== donat start ==== -->
       <section class="donat_section">
@@ -1175,135 +1407,6 @@
                 <div class="donat_amount">
                   <!-- Optional custom amount input or progress bar can go here -->
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==== causes start ==== -->
-      <section class="causes_section section_space">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="top_title">
-                <h2>OUR CAUSES & GOALS</h2>
-                <h3>Supporting Key Community Initiatives</h3>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Cause 1: Empowering Women Through Skill Training -->
-            <div
-              class="col col-lg-4 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1200ms"
-            >
-              <div class="causes_card">
-                <div class="imgage">
-                  <img
-                    src="assets/images/causes/skill-women.png"
-                    alt="Women Skill Development"
-                  />
-                  <span>Skill Development</span>
-                </div>
-                <div class="content">
-                  <h2>
-                    <a href="causes-single.html"
-                      >Empowering Women Through Skill Training</a
-                    >
-                  </h2>
-                  <p>
-                    Offering free training in tailoring, weaving, and embroidery
-                    to help women become financially independent and
-                    self-employed.
-                  </p>
-                </div>
-                <!-- <div class="donet_progres">
-                  <div class="progres">
-                    <div class="bar" style="width: 72%"></div>
-                    <p class="percent">72%</p>
-                  </div>
-                  <div class="donet_amaunt">
-                    <span>₹10,00,000 Goal</span>
-                    <span>₹7,20,000 Raised</span>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-
-            <!-- Cause 2: Rural Healthcare Camps -->
-            <div
-              class="col col-lg-4 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1400ms"
-            >
-              <div class="causes_card">
-                <div class="imgage">
-                  <img
-                    src="assets/images/causes/health-camp.png"
-                    alt="Medical Camp Services"
-                  />
-                  <span>Healthcare Access</span>
-                </div>
-                <div class="content">
-                  <h2>
-                    <a href="causes-single.html"
-                      >Organizing Rural Healthcare Camps</a
-                    >
-                  </h2>
-                  <p>
-                    Conducting free medical and eye camps in SC/ST villages in
-                    partnership with hospitals to offer diagnosis, treatment,
-                    and medicines.
-                  </p>
-                </div>
-                <!-- <div class="donet_progres">
-                  <div class="progres">
-                    <div class="bar" style="width: 64%"></div>
-                    <p class="percent">64%</p>
-                  </div>
-                  <div class="donet_amaunt">
-                    <span>₹8,00,000 Goal</span>
-                    <span>₹5,12,000 Raised</span>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-
-            <!-- Cause 3: Environmental Protection Campaigns -->
-            <div
-              class="col col-lg-4 col-md-6 col-12 wow fadeInUp"
-              data-wow-duration="1600ms"
-            >
-              <div class="causes_card">
-                <div class="imgage">
-                  <img
-                    src="assets/images/causes/environment-action.png"
-                    alt="Tree Planting Program"
-                  />
-                  <span>Environment</span>
-                </div>
-                <div class="content">
-                  <h2>
-                    <a href="causes-single.html"
-                      >Protecting Nature Through Local Action</a
-                    >
-                  </h2>
-                  <p>
-                    Supporting palm seed planting, tree drives, and cloth bag
-                    awareness campaigns to promote sustainability in rural and
-                    tribal regions.
-                  </p>
-                </div>
-                <!-- <div class="donet_progres">
-                  <div class="progres">
-                    <div class="bar" style="width: 90%"></div>
-                    <p class="percent">90%</p>
-                  </div>
-                  <div class="donet_amaunt">
-                    <span>₹5,00,000 Goal</span>
-                    <span>₹4,50,000 Raised</span>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -1454,38 +1557,30 @@
         </div>
         <div class="project_content">
           <div class="container-fluid">
-            <div class="row">
+            <div class="row" style="display: flex; justify-content: center">
               <div class="col-xl-3 col-md-6 col-12">
                 <div class="project_item">
                   <div class="image">
                     <img
-                      src="assets/images/blog/medical-camp.jpg"
-                      alt="Skill Development Training Project"
-                    />
-                  </div>
-                  <div class="project_overlay">
-                    <a href="project-single.html">
-                      <img
-                        src="assets/images/project/icon.png"
-                        alt="View Project Details"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-md-6 col-12">
-                <div class="project_item">
-                  <div class="image">
-                    <img
-                      src="assets/images/blog/tree-planting.jpg"
+                      src="assets/images/blog/handloom-training.jpg"
                       alt="Healthcare Outreach Project"
+                      style="border-radius: 20px"
                     />
                   </div>
-                  <div class="project_overlay">
-                    <a href="project-single.html">
+                  <div class="project_overlay" style="display: flex">
+                    <a
+                      href="project-single.html"
+                      style="
+                        margin-bottom: 110px;
+                        position: absolute;
+                        top: 80px;
+                        left: 130px;
+                      "
+                    >
                       <img
                         src="assets/images/project/icon.png"
-                        alt="View Project Details"
+                        alt="View
+                      Project Details"
                       />
                     </a>
                   </div>
@@ -1495,15 +1590,25 @@
                 <div class="project_item">
                   <div class="image">
                     <img
-                      src="assets/images/services/market-access.jpg"
+                      src="assets/images/blog/kkt-training.jpg"
                       alt="Environmental Sustainability Project"
+                      style="border-radius: 20px"
                     />
                   </div>
-                  <div class="project_overlay">
-                    <a href="project-single.html">
+                  <div class="project_overlay" style="display: flex">
+                    <a
+                      href="project-single.html"
+                      style="
+                        margin-bottom: 110px;
+                        position: absolute;
+                        top: 80px;
+                        left: 130px;
+                      "
+                    >
                       <img
                         src="assets/images/project/icon.png"
-                        alt="View Project Details"
+                        alt="View
+                      Project Details"
                       />
                     </a>
                   </div>
@@ -1513,15 +1618,25 @@
                 <div class="project_item">
                   <div class="image">
                     <img
-                      src="assets/images/blog/awareness-program.jpg"
+                      src="assets/images/blog/student-handicrafts.jpg"
                       alt="Women Empowerment Project"
+                      style="border-radius: 20px; min-height: 240px"
                     />
                   </div>
-                  <div class="project_overlay">
-                    <a href="project-single.html">
+                  <div class="project_overlay" style="display: flex">
+                    <a
+                      href="project-single.html"
+                      style="
+                        margin-bottom: 110px;
+                        position: absolute;
+                        top: 80px;
+                        left: 130px;
+                      "
+                    >
                       <img
                         src="assets/images/project/icon.png"
-                        alt="View Project Details"
+                        alt="View
+                      Project Details"
                       />
                     </a>
                   </div>
@@ -1758,567 +1873,8 @@
         </div>
       </section>
 
-      <!-- ==== blog start ==== -->
-      <section class="blog_section_s5 section_space">
-        <div class="container">
-          <div class="row">
-            <div class="top_title">
-              <div class="row">
-                <div class="col-12">
-                  <h2>INSIDE SBST INITIATIVES</h2>
-                  <h3>Latest Activities & Field Experiences</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Blog 1: Skill Training -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/handloom-training.jpg"
-                    alt="Skill Training Program"
-                  />
-                  <span>TRAINING</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, April 01, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Empowering Women Through Handloom Training</a
-                    >
-                  </h2>
-                  <p>
-                    Our SAMARTH handloom training in Kudimiyampalayam enabled 30
-                    women to gain skills and become self-reliant through
-                    employment and self-enterprise.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (5)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.8)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 2: Medical Camps -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/medical-camp.jpg"
-                    alt="Medical Camp"
-                  />
-                  <span>HEALTHCARE</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, May 19, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Serving Remote Villages with Free Medical Camps</a
-                    >
-                  </h2>
-                  <p>
-                    In association with Nantha Siddha Medical College, SBST
-                    provided vital healthcare access to over 500 people across
-                    multiple SC villages in Erode district.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.7)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 3: Tree Plantation -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/tree-planting.jpg"
-                    alt="Tree Plantation"
-                  />
-                  <span>ENVIRONMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 10, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Planting 2000 Palm Seeds Along River Cauvery</a
-                    >
-                  </h2>
-                  <p>
-                    Promoting environmental sustainability, SBST led a major
-                    drive to plant palm seeds on riverbanks—reducing erosion and
-                    restoring ecological balance.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (4)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.6)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Additional Blog Cards (optional) -->
-            <!-- Add more real events like exhibitions, child education kits, or Kabaddi tournaments here -->
-            <!-- Blog 4: Women SHG Exhibition -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/shg-exhibition.jpg"
-                    alt="SHG Exhibition"
-                  />
-                  <span>EXHIBITION</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Oct 13, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Empowering Women SHGs Through Direct Sales</a
-                    >
-                  </h2>
-                  <p>
-                    SBST organized a Handicraft Exhibition in Erode where 45
-                    stalls showcased 250+ handmade products by SHGs, boosting
-                    income through direct customer sales.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.5)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 5: Awareness Program -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/awareness-program.jpg"
-                    alt="Awareness Program"
-                  />
-                  <span>EDUCATION</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 16, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Awareness Drive on Sericulture & Handblock Printing</a
-                    >
-                  </h2>
-                  <p>
-                    At Rangapuram and Mettupalayam, SBST educated SC women and
-                    students on sustainable careers in handloom and sericulture,
-                    inspiring self-employment.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (6)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.9)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 6: Sports & Youth Engagement -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/kabaddi-match.jpg"
-                    alt="Kabaddi Match"
-                  />
-                  <span>SPORTS</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 2, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >District-Level Kabaddi Match for Youth</a
-                    >
-                  </h2>
-                  <p>
-                    Promoting health, team spirit, and local talent, SBST hosted
-                    a youth kabaddi match in Arachalur with 90 players
-                    participating from nearby villages.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (2)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.6)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- blog 6 sc community support -->
-            <!-- Blog 10: SC Women Empowerment -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/sc-women-support.jpg"
-                    alt="SC Women Empowerment"
-                  />
-                  <span>SC SUPPORT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Jan 05, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Entrepreneurship Training for SC Community Women</a
-                    >
-                  </h2>
-                  <p>
-                    At Pennagaram, Dharmapuri, SBST conducted a specialized EDP
-                    on hand block printing and embroidery for SC women, enabling
-                    them to start small businesses and become financially
-                    self-reliant.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (4)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.8)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- kaivinai thittam -->
-            <!-- Blog 9: KKT Skill Training -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/kkt-training.jpg"
-                    alt="KKT Skill Training"
-                  />
-                  <span>SKILL DEVELOPMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Feb 29, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >KKT Advanced Tailoring & Printing Training</a
-                    >
-                  </h2>
-                  <p>
-                    SBST conducted multiple training batches under the KKT
-                    scheme across Tamil Nadu, enabling over 470 women to gain
-                    certified skills with stipend and loan support.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (7)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.9)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 8: Meendum Manjappai Campaign -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/yellow-bag-campaign.jpg"
-                    alt="Meendum Manjappai Awareness"
-                  />
-                  <span>ENVIRONMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Aug 28, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Cloth Bag Distribution for Plastic-Free Awareness</a
-                    >
-                  </h2>
-                  <p>
-                    SBST distributed over 800 yellow cloth bags across schools
-                    and tribal areas in Bergur Hills to promote Tamil Nadu’s
-                    ‘Meendum Manjappai’ anti-plastic movement.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (4)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.7)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- hand emmbroid -->
-            <!-- Blog 7: Hand Embroidery Training -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/embroidery-training.jpg"
-                    alt="Hand Embroidery Training"
-                  />
-                  <span>WOMEN EMPOWERMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 21, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Free Hand Embroidery Training for Women</a
-                    >
-                  </h2>
-                  <p>
-                    SBST organized a 5-day free embroidery workshop at Tex
-                    Valley, helping 70 women acquire income-generating skills
-                    and fostering self-employment.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.6)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Blog 11: Rural Eye Camp -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img src="assets/images/blog/eye-camp.jpg" alt="Eye Camp" />
-                  <span>HEALTH</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Jan 23, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Eye Camp at Vellivalasu for SC Villagers</a
-                    >
-                  </h2>
-                  <p>
-                    SBST, in collaboration with Erode Eye Foundation, organized
-                    a free eye camp benefiting 260 residents in Vellivalasu
-                    village, enabling early diagnosis and improved vision
-                    health.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.7)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Blog 12: Handicraft Workshop -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/student-handicrafts.jpg"
-                    alt="Student Handicraft Workshop"
-                  />
-                  <span>EDUCATION</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Feb 12, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Creative Handicraft Workshop for Students</a
-                    >
-                  </h2>
-                  <p>
-                    At Vivekananda Matric School in Vellode, SBST introduced 60
-                    students to making useful crafts from recycled materials,
-                    encouraging creativity and sustainable habits.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (2)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.5)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ==== cta start ==== -->
-      <section class="cta_section">
+      <section class="cta_section" style="margin-top: 0px">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 col-12">
@@ -2415,13 +1971,7 @@
               <div class="col-lg-3 col-md-6 col-12">
                 <div class="widget_column widget_contact">
                   <h2>Contact Us</h2>
-                  <div>
-                    <span>
-                      No.5 Vemandampalayam, Attavanai Hanumanpalli Post,<br />
-                      Arachalur via, Erode - 638101,<br />
-                      Tamil Nadu, India
-                    </span>
-                  </div>
+
                   <div>
                     <span>Phone: +91 99762 9999</span><br />
                     <span>Phone: +91 98945 35100</span><br />
@@ -2430,6 +1980,22 @@
                   <div>
                     <span>Email: sapphirebluesocialtrust@gmail.com</span><br />
                     <span>Website: www.sapphirebluesocialtrust.org</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_contact">
+                  <h2>Address</h2>
+                  <div>
+                    <span>
+                      No.5 Vemandampalayam, <br />
+                      Attavanai Hanumanpalli Post,<br />
+                      Arachalur via,<br />
+                      Erode - 638101,<br />
+                      Tamil Nadu,<br />
+                      India.
+                    </span>
                   </div>
                 </div>
               </div>
