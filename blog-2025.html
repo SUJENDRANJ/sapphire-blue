@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="template" />
+    <link
+      rel="icon"
+      title="SapphireBlueSocialTrust"
+      sizes="16x16"
+      type="image/png"
+      href="assets/images/logo.png"
+    />
+    <title>Nonta - Charity Nonprofit HTML5 Template</title>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css" />
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="main_page_wrapper">
+      <!-- ==== header start ==== -->
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-7 col-12">
+                <div class="contacr_info">
+                  <ul>
+                    <li>
+                      <div class="number">
+                        <span>NEWS:</span>Give Ready to help us
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-5 col-12">
+                <div class="contacr_right">
+                  <ul>
+                    <li><span>Visit our social pages:</span></li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-twitter-alt"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-skype"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ti-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_wrap" style="height: 90px">
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" width="80%" alt="" />
+          </a>
+          <div class="header_about_btn" onclick="openNav()">
+            <img src="assets/images/about_btn.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-8 col-12">
+                <div class="mobile_menu_btn">
+                  <div class="icon">
+                    <i class="ti-align-justify" id="bar_close"></i>
+                  </div>
+                </div>
+                <div class="menu_wrap" id="menu_wrap">
+                  <ul class="main_menu">
+                    <li>
+                      <a href="index.html">Home</a>
+                    </li>
+
+                    <li><a href="about.html">about us</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+                    <li>
+                      <a href="project-single.html">projects</a>
+                    </li>
+
+                    <li><a href="blog.html">Blogs</a></li>
+
+                    <li><a href="contact.html">contact</a></li>
+
+                    <li><a href="our-gallery.html">our gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4 col-12">
+                <div class="header_right">
+                  <div class="search_icon">
+                    <i class="ti-search bx-search"></i>
+                    <form class="input-box">
+                      <div>
+                        <input
+                          class="search_fild"
+                          type="text"
+                          placeholder="Search..."
+                        />
+                        <button type="button"><i class="ti-search"></i></button>
+                      </div>
+                    </form>
+                  </div>
+                  <a href="causes-single.html" class="btn_primary"
+                    >DONATE NOW<i class="ti-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--  page_title_section  start-->
+      <section class="page_title_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="content">
+                <h2>Blogs</h2>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>Blog - 2025</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/slider/shape-5.png" alt="" />
+        </div>
+      </section>
+
+      <!-- ==== blog single start ==== -->
+      <style>
+        .year-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .blog-card-single {
+          background-color: #fff;
+          border-radius: 16px;
+          transition: all 0.3s ease;
+        }
+
+        .blog-card-single:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image img {
+          border-bottom: 1px solid #ddd;
+          object-fit: cover;
+          max-height: 300px;
+        }
+
+        .blog-content {
+          background: #f9f9f9;
+        }
+
+        .blog-title {
+          margin-bottom: 1rem;
+        }
+
+        .blog-description {
+          line-height: 1.6;
+        }
+      </style>
+      <section class="blog_single_page section_space">
+        <div class="container">
+          <h1>2025</h1>
+          <div class="row align-items-center gy-4">
+            <!-- Image Left -->
+            <div class="col-12 col-md-6 order-1 order-md-1">
+              <div class="blog_single_wrap">
+                <div class="image">
+                  <img
+                    src="assets/images/blog-single/img-1.jpg"
+                    alt="SC Women Training"
+                    class="img-fluid rounded shadow"
+                    style="max-width: 100%; height: auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Right -->
+            <div class="col-12 col-md-6 order-2 order-md-2">
+              <div class="blog_single_wrap">
+                <div class="content">
+                  <ul
+                    class="list-unstyled text-muted small d-flex flex-wrap gap-3 mb-2"
+                  >
+                    <li><span>SC SUPPORT</span></li>
+                    <li>Dharmapuri / Jan 05, 2025</li>
+                  </ul>
+                  <h2>Entrepreneurship Training for SC Community Women</h2>
+                  <p>
+                    SBST conducted entrepreneurship development programs
+                    specifically for SC women in Dharmapuri. From January to
+                    March 2025, SC/ST participants were prioritized in KKT skill
+                    development batches. These initiatives improved incomes for
+                    SC families by providing both training and financial access
+                    support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center gy-4">
+            <!-- Image Left -->
+            <div class="col-12 col-md-6 order-1 order-md-1">
+              <div class="blog_single_wrap">
+                <div class="image">
+                  <img
+                    src="assets/images/blog-single/img-1.jpg"
+                    alt="SC Women Training"
+                    class="img-fluid rounded shadow"
+                    style="max-width: 100%; height: auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Right -->
+            <div class="col-12 col-md-6 order-2 order-md-2">
+              <div class="blog_single_wrap">
+                <div class="content">
+                  <ul
+                    class="list-unstyled text-muted small d-flex flex-wrap gap-3 mb-2"
+                  >
+                    <li><span>HEALTH</span></li>
+                    <li>Erode / Jan 23, 2025</li>
+                  </ul>
+                  <h2>Eye Camp at Vellivalasu for SC Villagers</h2>
+                  <p>
+                    SBST, in collaboration with Erode Eye Foundation, organized
+                    a major eye care camp at Vellivalasu, Erode district. The
+                    camp provided free eye screenings, diagnosis, and treatments
+                    for rural SC communities. Hundreds of villagers benefited
+                    from preventive care, helping reduce avoidable vision
+                    issues.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center gy-4">
+            <!-- Image Left -->
+            <div class="col-12 col-md-6 order-1 order-md-1">
+              <div class="blog_single_wrap">
+                <div class="image">
+                  <img
+                    src="assets/images/blog-single/img-1.jpg"
+                    alt="SC Women Training"
+                    class="img-fluid rounded shadow"
+                    style="max-width: 100%; height: auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Right -->
+            <div class="col-12 col-md-6 order-2 order-md-2">
+              <div class="blog_single_wrap">
+                <div class="content">
+                  <ul
+                    class="list-unstyled text-muted small d-flex flex-wrap gap-3 mb-2"
+                  >
+                    <li><span>EDUCATION</span></li>
+                    <li>Krishnagiri / Feb 12, 2025</li>
+                  </ul>
+                  <h2>Creative Handicraft Workshop for Students</h2>
+                  <p>
+                    SBST implemented Kalaignar Kaivinai Thittam (KKT) training
+                    across Erode, Salem, Krishnagiri, Kanyakumari, Namakkal, and
+                    other districts. Participants received stipends, free meals,
+                    certificates, and support in accessing bank loans for
+                    business startups. The program created skilled workers and
+                    self-employed entrepreneurs, strengthening local economies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center gy-4">
+            <!-- Image Left -->
+            <div class="col-12 col-md-6 order-1 order-md-1">
+              <div class="blog_single_wrap">
+                <div class="image">
+                  <img
+                    src="assets/images/blog-single/img-1.jpg"
+                    alt="SC Women Training"
+                    class="img-fluid rounded shadow"
+                    style="max-width: 100%; height: auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Right -->
+            <div class="col-12 col-md-6 order-2 order-md-2">
+              <div class="blog_single_wrap">
+                <div class="content">
+                  <ul
+                    class="list-unstyled text-muted small d-flex flex-wrap gap-3 mb-2"
+                  >
+                    <li><span>SKILL DEVELOPMENT</span></li>
+                    <li>Dharmapuri / Feb 29, 2025</li>
+                  </ul>
+                  <h2>KKT Advanced Tailoring & Printing Training</h2>
+                  <p>
+                    SBST organized Entrepreneurship Development Training for SC
+                    women at Pennagaram, Dharmapuri district. January – March
+                    2025: KKT Skill Training was conducted in Erode, Salem,
+                    Krishnagiri, Kanyakumari, Namakkal, and other districts.
+                    These programs empowered women to start tailoring, weaving,
+                    and textile businesses, improving their incomes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center gy-4">
+            <!-- Image Left -->
+            <div class="col-12 col-md-6 order-1 order-md-1">
+              <div class="blog_single_wrap">
+                <div class="image">
+                  <img
+                    src="assets/images/blog-single/img-1.jpg"
+                    alt="SC Women Training"
+                    class="img-fluid rounded shadow"
+                    style="max-width: 100%; height: auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Right -->
+            <div class="col-12 col-md-6 order-2 order-md-2">
+              <div class="blog_single_wrap">
+                <div class="content">
+                  <ul
+                    class="list-unstyled text-muted small d-flex flex-wrap gap-3 mb-2"
+                  >
+                    <li><span>ENVIRONMENT</span></li>
+                    <li>Dharmapuri / Mar 05, 2025</li>
+                  </ul>
+                  <h2>Sustainability Maintenance Efforts by SBST</h2>
+                  <p>
+                    Although no major new plantation programs were started, SBST
+                    maintained the 2024 plantations at Unjapalayam village and
+                    River Cauvery banks. Volunteers helped water and maintain
+                    the previously planted trees and palm seeds to ensure
+                    survival and growth. The “Meendum Manjappai” campaign
+                    promoting cloth bag usage also continued in schools and
+                    villages informally during this period
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==== footer starts ====  -->
+      <section class="footer_section">
+        <div class="footer_top">
+          <div class="container">
+            <div class="row">
+              <!-- About Widget -->
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_about">
+                  <div class="footer_logo">
+                    <a href="index.html">
+                      <img
+                        src="assets/images/logo3.png"
+                        alt="Sapphire Blue Social Trust Logo"
+                      />
+                    </a>
+                  </div>
+                  <p>
+                    Sapphire Blue Social Trust is committed to empowering
+                    marginalized communities through education, health, and
+                    skill development programs across Tamil Nadu.
+                  </p>
+                  <ul class="social_widget">
+                    <li>
+                      <a href="" target="_blank"><i class="ti-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"
+                        ><i class="ti-twitter-alt"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"><i class="ti-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"
+                        ><i class="ti-instagram"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Quick Links Widget -->
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_link">
+                  <h2>Quick Links</h2>
+                  <ul>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Latest News</a></li>
+                    <li><a href="causes-single.html">Donate</a></li>
+                    <li><a href="our-gallery.html">Our Gallery</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Gallery Widget -->
+
+              <!-- <div class="mobile-only-space" style="height: 30px"></div> -->
+
+              <!-- Contact Widget -->
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_contact">
+                  <h2>Contact Us</h2>
+
+                  <div>
+                    <span>Phone: +91 99762 9999</span><br />
+                    <span>Phone: +91 98945 35100</span><br />
+                    <span>Phone: +91 96777 77193</span>
+                  </div>
+                  <div>
+                    <span>Email: sapphirebluesocialtrust@gmail.com</span><br />
+                    <span>Website: www.sapphirebluesocialtrust.org</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="widget_column widget_contact">
+                  <h2>Address</h2>
+                  <div>
+                    <span>
+                      No.5 Vemandampalayam, <br />
+                      Attavanai Hanumanpalli Post,<br />
+                      Arachalur via,<br />
+                      Erode - 638101,<br />
+                      Tamil Nadu,<br />
+                      India.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p>
+                  Copyright © Sapphire Blue Social Trust 2025. All rights
+                  reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shape-1">
+          <img src="assets/images/footer/shape-1.png" alt="Decorative Shape" />
+        </div>
+        <div class="shape-2">
+          <img src="assets/images/footer/shape-2.png" alt="Decorative Shape" />
+        </div>
+      </section>
+
+      <!-- Sticky Donate Button -->
+      <style>
+        #sticky-donate-btn {
+          position: fixed;
+          bottom: 32px;
+          right: 32px;
+          z-index: 9999;
+          background: linear-gradient(135deg, #ff416c, #ff4b2b);
+          color: #fff;
+          border: none;
+          border-radius: 50px;
+          padding: 18px 38px;
+          font-size: 1.2em;
+          font-weight: 600;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          box-shadow: 0 8px 24px rgba(255, 65, 108, 0.3);
+          cursor: pointer;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        #sticky-donate-btn:hover {
+          transform: scale(1.08);
+          box-shadow: 0 10px 28px rgba(255, 75, 43, 0.5);
+        }
+
+        #sticky-donate-btn .heart-icon {
+          width: 1.6em;
+          height: 1.6em;
+          fill: #fff;
+          stroke: #fff;
+          animation: heart-beat 1.5s infinite;
+          filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+        }
+
+        #sticky-donate-btn:hover .heart-icon {
+          animation: heart-beat-fast 0.7s infinite;
+          filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+        }
+
+        @keyframes heart-beat {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          10% {
+            transform: scale(1.12);
+          }
+          20% {
+            transform: scale(0.92);
+          }
+          30% {
+            transform: scale(1.08);
+          }
+          40% {
+            transform: scale(0.96);
+          }
+          50% {
+            transform: scale(1);
+          }
+        }
+
+        @keyframes heart-beat-fast {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          20% {
+            transform: scale(1.18);
+          }
+          40% {
+            transform: scale(0.9);
+          }
+          60% {
+            transform: scale(1.14);
+          }
+          80% {
+            transform: scale(0.95);
+          }
+        }
+
+        @keyframes pulse-glow {
+          0%,
+          100% {
+            box-shadow: 0 0 10px rgba(255, 75, 43, 0.4),
+              0 0 20px rgba(255, 65, 108, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 16px rgba(255, 75, 43, 0.6),
+              0 0 32px rgba(255, 65, 108, 0.5);
+          }
+        }
+
+        @media (max-width: 900px) {
+          #sticky-donate-btn {
+            padding: 14px 24px;
+            font-size: 1em;
+            bottom: 18px;
+            right: 18px;
+          }
+          #sticky-donate-btn .heart-icon {
+            width: 1.3em;
+            height: 1.3em;
+          }
+        }
+
+        @media (max-width: 600px) {
+          #sticky-donate-btn {
+            padding: 12px 18px;
+            font-size: 0.95em;
+            bottom: 12px;
+            right: 12px;
+          }
+          #sticky-donate-btn .heart-icon {
+            width: 1.1em;
+            height: 1.1em;
+          }
+        }
+      </style>
+
+      <button
+        title="Help someone in need ❤️"
+        id="sticky-donate-btn"
+        onclick="window.location.href='causes-single.html'"
+        aria-label="Donate Now"
+      >
+        <span>Donate Now</span>
+        <svg class="heart-icon" viewBox="0 0 24 24">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+         C13.09 3.81 14.76 3 16.5 3
+         19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54
+         L12 21.35z"
+            fill="#fff"
+            stroke="#fff"
+          />
+        </svg>
+      </button>
+      <!-- plugins js -->
+
+      <script src="assets/js/jquery-min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/slick-animation.min.js"></script>
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="assets/js/counterup.min.js"></script>
+      <script src="assets/js/waypoints.js"></script>
+      <script src="assets/js/datepicker.js"></script>
+      <script src="assets/js/wow.js"></script>
+      <script src="assets/js/jquery.nice-select.js"></script>
+      <script src="assets/js/script.js"></script>
+
+      <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        new Swiper(".card-wrapper", {
+          // Optional parameters
+
+          //loop: true,
+          spaceBetween: 20,
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          //Responsive breakpoints
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+        });
+      </script> -->
+    </div>
+  </body>
+</html>
