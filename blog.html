@@ -26,6 +26,15 @@
     <link rel="stylesheet" href="assets/css/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -158,6 +167,79 @@
       </section>
 
       <!-- ==== blog start ==== -->
+      <style>
+        .custom-arrow {
+          width: 50px;
+          height: 50px;
+          background-color: #ffffff;
+          border-radius: 100%;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          color: black;
+          position: absolute;
+          top: 50%;
+          z-index: 20;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s ease;
+          cursor: pointer;
+          font-size: 22px;
+          overflow: hidden;
+        }
+
+        /* Remove any 'aspect-ratio' — not needed, causes oval on some browsers */
+        .custom-arrow::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          font-size: 20px;
+          transition: transform 0.3s ease;
+          color: black;
+        }
+
+        .swiper-button-prev.custom-arrow {
+          left: 0px;
+        }
+
+        .swiper-button-next.custom-arrow {
+          right: 0px;
+        }
+
+        /* Hover effect */
+        .custom-arrow:hover {
+          transform: translateY(-50%) scale(1.1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Remove default Swiper arrow content */
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          display: none;
+        }
+
+        /* Set icons */
+        .swiper-button-prev.custom-arrow::before {
+          content: "\f104"; /* ← */
+        }
+
+        .swiper-button-next.custom-arrow::before {
+          content: "\f105"; /* → */
+        }
+
+        .custom-arrow:hover::before {
+          transform: scale(1.2);
+        }
+        .blog-card img {
+          max-height: 200px;
+        }
+
+        @media (min-width: 768px) {
+          .blog_section_s5 .blog-card {
+            min-height: 520px;
+          }
+        }
+      </style>
+
       <section class="blog_section_s5 section_space">
         <div class="container">
           <div class="row">
@@ -170,547 +252,763 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <!-- Blog 1: Skill Training -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/handloom-training.jpg"
-                    alt="Skill Training Program"
-                  />
-                  <span>TRAINING</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+          <h1>2025</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/sc-women-support.jpg"
+                        alt="SC Women Empowerment"
+                      />
+                      <span>SC SUPPORT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Jan 05, 2025</span>
+                      <h2>
+                        <a href="blog-2025.html"
+                          >Entrepreneurship Training for SC Community Women</a
+                        >
+                      </h2>
+                      <p>
+                        SBST empowered SC women in Pennagaram with printing and
+                        embroidery skills for self-employment.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, April 01, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Empowering Women Through Handloom Training</a
-                    >
-                  </h2>
-                  <p>
-                    Our SAMARTH handloom training in Kudimiyampalayam enabled 30
-                    women to gain skills and become self-reliant through
-                    employment and self-enterprise.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (5)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.8)</span>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Jan 23, 2025</span>
+                      <h2>
+                        <a href="blog-2025.html"
+                          >Eye Camp at Vellivalasu for SC Villagers</a
+                        >
+                      </h2>
+                      <p>
+                        SBST and Erode Eye Foundation organized a free eye camp
+                        in Vellivalasu, benefiting 260 villagers with early
+                        vision care.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Feb 12, 2025</span>
+                      <h2>
+                        <a href="blog-2025.html"
+                          >Creative Handicraft Workshop for Students</a
+                        >
+                      </h2>
+                      <p>
+                        SBST taught 60 Vellode students to create crafts from
+                        recycled materials, fostering creativity and
+                        sustainability.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>SKILL DEVELOPMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Feb 29, 2025</span>
+                      <h2>
+                        <a href="blog-2025.html"
+                          >KKT Advanced Tailoring & Printing Training</a
+                        >
+                      </h2>
+                      <p>
+                        SBST trained 470+ women across Tamil Nadu under the KKT
+                        scheme, offering certified skills, stipends, and loan
+                        support.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
             </div>
-
-            <!-- Blog 2: Medical Camps -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/medical-camp.jpg"
-                    alt="Medical Camp"
-                  />
-                  <span>HEALTHCARE</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+          </div>
+          <h1>2024</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/handloom-training.jpg"
+                        alt="Skill Training Program"
+                      />
+                      <span>TRAINING</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, April 01, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >Empowering Women Through Handloom Training</a
+                        >
+                      </h2>
+                      <p>
+                        SAMARTH handloom training in Kudimiyampalayam empowered
+                        30 women with skills for self-reliance and
+                        entrepreneurship.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, May 19, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Serving Remote Villages with Free Medical Camps</a
-                    >
-                  </h2>
-                  <p>
-                    In association with Nantha Siddha Medical College, SBST
-                    provided vital healthcare access to over 500 people across
-                    multiple SC villages in Erode district.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.7)</span>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/medical-camp.jpg"
+                        alt="Medical Camp"
+                      />
+                      <span>HEALTHCARE</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, May 19, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >Serving Remote Villages with Free Medical Camps</a
+                        >
+                      </h2>
+                      <p>
+                        In association with Nantha Siddha Medical College, SBST
+                        provided vital healthcare access to over 500 people
+                        across multiple SC villages in Erode district.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, May 17, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >Planting 1500 Palm Seeds Along River Cauvery</a
+                        >
+                      </h2>
+                      <p>
+                        SBST planted palm seeds along riverbanks to combat
+                        erosion and promote ecological sustainability.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/yellow-bag-campaign.jpg"
+                        alt="Meendum Manjappai Awareness"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Aug 28, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >Cloth Bag Distribution for Plastic-Free Awareness</a
+                        >
+                      </h2>
+                      <p>
+                        SBST distributed over 800 yellow cloth bags across
+                        schools and tribal areas in Bergur Hills to promote
+                        Tamil Nadu’s ‘Meendum Manjappai’ anti-plastic movement.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--5-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kabaddi-match.jpg"
+                        alt="Kabaddi Match"
+                      />
+                      <span>SPORTS</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Sept 2, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >District-Level Kabaddi Match for Youth</a
+                        >
+                      </h2>
+                      <p>
+                        Promoting health, team spirit, and local talent, SBST
+                        hosted a youth kabaddi match in Arachalur with 90
+                        players participating from nearby villages.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--6-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/embroidery-training.jpg"
+                        alt="Hand Embroidery Training"
+                      />
+                      <span>WOMEN EMPOWERMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Sept 21, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >Free Hand Embroidery Training for Women</a
+                        >
+                      </h2>
+                      <p>
+                        SBST organized a 5-day free embroidery workshop at Tex
+                        Valley, helping 70 women acquire income-generating
+                        skills and fostering self-employment.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--7-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/shg-exhibition.jpg"
+                        alt="SHG Exhibition"
+                      />
+                      <span>EXHIBITION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, Oct 13, 2024</span>
+                      <h2>
+                        <a href="blog-2024.html"
+                          >Empowering Women SHGs Through Direct Sales</a
+                        >
+                      </h2>
+                      <p>
+                        SBST's Erode Handicraft Exhibition featured 45 stalls
+                        with 250+ SHG products, boosting income through direct
+                        sales.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
             </div>
-
-            <!-- Blog 3: Tree Plantation -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/tree-planting.jpg"
-                    alt="Tree Plantation"
-                  />
-                  <span>ENVIRONMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+          </div>
+          <h1>2023</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog-2023.html"
+                          >Health and Hygiene Awareness Program</a
+                        >
+                      </h2>
+                      <p>
+                        SBST conducted health, hygiene, and environmental
+                        awareness programs in Erode to promote water
+                        conservation and sustainable practices.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 10, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Planting 2000 Palm Seeds Along River Cauvery</a
-                    >
-                  </h2>
-                  <p>
-                    Promoting environmental sustainability, SBST led a major
-                    drive to plant palm seeds on riverbanks—reducing erosion and
-                    restoring ecological balance.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (4)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.6)</span>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION & TRAINING</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog-2023.html"
+                          >Hand on Training for Hand block Printing
+                        </a>
+                      </h2>
+                      <p>
+                        SBST held a free hands-on hand block printing training
+                        for Erode artisans at Tex Valley, Erode, Tamil Nadu.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>WOMEN EMPOWERMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog-2023.html">Jewellery Making Workshop </a>
+                      </h2>
+                      <p>
+                        SBST has conducted a two days free Jewellery making
+                        workshop to women of Erode and Salem Districts held at
+                        Pon Hall, Hotel Aishwaryaa , Erode
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2023</span>
+                      <h2>
+                        <a href="blog-2023.html">Prevent Tress in Road Side</a>
+                      </h2>
+                      <p>
+                        SBST regularly waters roadside trees during summer to
+                        ensure their survival and promote a greener environment.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
             </div>
-
-            <!-- Additional Blog Cards (optional) -->
-            <!-- Add more real events like exhibitions, child education kits, or Kabaddi tournaments here -->
-            <!-- Blog 4: Women SHG Exhibition -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/shg-exhibition.jpg"
-                    alt="SHG Exhibition"
-                  />
-                  <span>EXHIBITION</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+          </div>
+          <h1>2022</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/sc-women-support.jpg"
+                        alt="SC Women Empowerment"
+                      />
+                      <span>SC SUPPORT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog-2022.html"
+                          >Training for Silk Handloom weaving
+                        </a>
+                      </h2>
+                      <p>
+                        SAMARTH Training for silk Handloom weaving started at
+                        Kudimiyampalayam, Erode district,Tamilnadu.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Oct 13, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Empowering Women SHGs Through Direct Sales</a
-                    >
-                  </h2>
-                  <p>
-                    SBST organized a Handicraft Exhibition in Erode where 45
-                    stalls showcased 250+ handmade products by SHGs, boosting
-                    income through direct customer sales.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.5)</span>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog-2022.html">Covid Vaccinations Camps </a>
+                      </h2>
+                      <p>
+                        SBST has arranged covid vaccinations camps in and around
+                        Erode District.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog-2022.html"
+                          >Distribute Stationary items for Students</a
+                        >
+                      </h2>
+                      <p>
+                        SBST distributed stationery and study materials to
+                        schoolchildren in Annanagar village, Erode district,
+                        Tamil Nadu.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>SKILL DEVELOPMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog-2022.html"
+                          >Pattern making and Tailoring</a
+                        >
+                      </h2>
+                      <p>
+                        SBST held a pattern making and tailoring training in
+                        Erode to empower women and marginalized communities.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--5-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2022</span>
+                      <h2>
+                        <a href="blog-2022.html"
+                          >Prevent People from Dengue and Malaria</a
+                        >
+                      </h2>
+                      <p>
+                        SBST conducted pest control activities across Erode
+                        villages to prevent dengue and malaria.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
             </div>
-
-            <!-- Blog 5: Awareness Program -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/awareness-program.jpg"
-                    alt="Awareness Program"
-                  />
-                  <span>EDUCATION</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+          </div>
+          <h1>2021</h1>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-item swiper-wrapper">
+                <!--1-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/sc-women-support.jpg"
+                        alt="SC Women Empowerment"
+                      />
+                      <span>SC SUPPORT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog-2021.html"
+                          >Entrepreneurship Training for SC Community Women</a
+                        >
+                      </h2>
+                      <p>
+                        SBST has done many training programs like
+                        Entrepreneurship and skill development programs for
+                        women and SC & Backward Community Peoples
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 16, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Awareness Drive on Sericulture & Handblock Printing</a
-                    >
-                  </h2>
-                  <p>
-                    At Rangapuram and Mettupalayam, SBST educated SC women and
-                    students on sustainable careers in handloom and sericulture,
-                    inspiring self-employment.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (6)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.9)</span>
+                </li>
+                <!--2-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/eye-camp.jpg"
+                        alt="Eye Camp"
+                      />
+                      <span>HEALTH</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog-2021.html"
+                          >Free Ambulance Service During Covid Lockdown</a
+                        >
+                      </h2>
+                      <p>
+                        During the pandemic, SBST offered free ambulance service
+                        and safety gear to frontline workers in Erode.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 6: Sports & Youth Engagement -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/kabaddi-match.jpg"
-                    alt="Kabaddi Match"
-                  />
-                  <span>SPORTS</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+                </li>
+                <!--3-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/student-handicrafts.jpg"
+                        alt="Student Handicraft Workshop"
+                      />
+                      <span>EDUCATION</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog-2021.html"
+                          >Creative Handicraft Workshop for Students</a
+                        >
+                      </h2>
+                      <p>
+                        To revive the endangered silk handloom industry, SBST
+                        and the Ministry of Textiles launched SAMARTH training
+                        for 4,000 beneficiaries.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 2, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >District-Level Kabaddi Match for Youth</a
-                    >
-                  </h2>
-                  <p>
-                    Promoting health, team spirit, and local talent, SBST hosted
-                    a youth kabaddi match in Arachalur with 90 players
-                    participating from nearby villages.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (2)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.6)</span>
+                </li>
+                <!--4-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/kkt-training.jpg"
+                        alt="KKT Skill Training"
+                      />
+                      <span>Women Empowerment</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog-2021.html"
+                          >KKT Advanced Tailoring & Printing Training</a
+                        >
+                      </h2>
+                      <p>
+                        SBST facilitated jobs and self-employment for 3,000+
+                        women, youth, and SC individuals across 7 Tamil Nadu
+                        districts.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- blog 6 sc community support -->
-            <!-- Blog 10: SC Women Empowerment -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/sc-women-support.jpg"
-                    alt="SC Women Empowerment"
-                  />
-                  <span>SC SUPPORT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
+                </li>
+                <!--5-->
+                <li class="card-item swiper-slide">
+                  <div class="blog-card">
+                    <div class="image">
+                      <img
+                        src="assets/images/blog/tree-planting.jpg"
+                        alt="Tree Plantation"
+                      />
+                      <span>ENVIRONMENT</span>
+                    </div>
+                    <div class="content">
+                      <span>By: SBST Team, 2021</span>
+                      <h2>
+                        <a href="blog-2021.html"
+                          >Planting 5000 Palm Seeds Along River Cauvery</a
+                        >
+                      </h2>
+                      <p>
+                        SBST planted 5,000+ trees in Erode with youth volunteers
+                        to combat global warming and air pollution.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Jan 05, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Entrepreneurship Training for SC Community Women</a
-                    >
-                  </h2>
-                  <p>
-                    At Pennagaram, Dharmapuri, SBST conducted a specialized EDP
-                    on hand block printing and embroidery for SC women, enabling
-                    them to start small businesses and become financially
-                    self-reliant.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (4)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.8)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- kaivinai thittam -->
-            <!-- Blog 9: KKT Skill Training -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/kkt-training.jpg"
-                    alt="KKT Skill Training"
-                  />
-                  <span>SKILL DEVELOPMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Feb 29, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >KKT Advanced Tailoring & Printing Training</a
-                    >
-                  </h2>
-                  <p>
-                    SBST conducted multiple training batches under the KKT
-                    scheme across Tamil Nadu, enabling over 470 women to gain
-                    certified skills with stipend and loan support.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (7)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.9)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 8: Meendum Manjappai Campaign -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/yellow-bag-campaign.jpg"
-                    alt="Meendum Manjappai Awareness"
-                  />
-                  <span>ENVIRONMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Aug 28, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Cloth Bag Distribution for Plastic-Free Awareness</a
-                    >
-                  </h2>
-                  <p>
-                    SBST distributed over 800 yellow cloth bags across schools
-                    and tribal areas in Bergur Hills to promote Tamil Nadu’s
-                    ‘Meendum Manjappai’ anti-plastic movement.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (4)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.7)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- hand emmbroid -->
-            <!-- Blog 7: Hand Embroidery Training -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/embroidery-training.jpg"
-                    alt="Hand Embroidery Training"
-                  />
-                  <span>WOMEN EMPOWERMENT</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Sept 21, 2024</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Free Hand Embroidery Training for Women</a
-                    >
-                  </h2>
-                  <p>
-                    SBST organized a 5-day free embroidery workshop at Tex
-                    Valley, helping 70 women acquire income-generating skills
-                    and fostering self-employment.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.6)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Blog 11: Rural Eye Camp -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img src="assets/images/blog/eye-camp.jpg" alt="Eye Camp" />
-                  <span>HEALTH</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Jan 23, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Eye Camp at Vellivalasu for SC Villagers</a
-                    >
-                  </h2>
-                  <p>
-                    SBST, in collaboration with Erode Eye Foundation, organized
-                    a free eye camp benefiting 260 residents in Vellivalasu
-                    village, enabling early diagnosis and improved vision
-                    health.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (3)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.7)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Blog 12: Handicraft Workshop -->
-            <div class="col col-lg-4 col-md-6 col-12">
-              <div class="blog-card">
-                <div class="image">
-                  <img
-                    src="assets/images/blog/student-handicrafts.jpg"
-                    alt="Student Handicraft Workshop"
-                  />
-                  <span>EDUCATION</span>
-                  <div class="overle">
-                    <img
-                      src="assets/images/blog/shape.png"
-                      alt="Decorative Shape"
-                    />
-                  </div>
-                </div>
-                <div class="content">
-                  <span>By: SBST Team, Feb 12, 2025</span>
-                  <h2>
-                    <a href="blog.html"
-                      >Creative Handicraft Workshop for Students</a
-                    >
-                  </h2>
-                  <p>
-                    At Vivekananda Matric School in Vellode, SBST introduced 60
-                    students to making useful crafts from recycled materials,
-                    encouraging creativity and sustainable habits.
-                  </p>
-                </div>
-                <div class="comment_reting">
-                  <div class="comment"><span>Comments (2)</span></div>
-                  <div class="reting">
-                    <ul>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star.png" alt="" /></li>
-                      <li><img src="assets/images/blog/star1.png" alt="" /></li>
-                    </ul>
-                    <span>(4.5)</span>
-                  </div>
-                </div>
-              </div>
+                </li>
+              </ul>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div
+                class="swiper-button-prev custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
+              <div
+                class="swiper-button-next custom-arrow"
+                style="
+                  height: 50px;
+                  width: 50px;
+                  opacity: 1;
+                  box-shadow: 5px 0px 10px black;
+                  top: 250px;
+                "
+              ></div>
             </div>
           </div>
         </div>
@@ -989,6 +1287,44 @@
       <script src="assets/js/wow.js"></script>
       <script src="assets/js/jquery.nice-select.js"></script>
       <script src="assets/js/script.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        new Swiper(".card-wrapper", {
+          // Optional parameters
+
+          //loop: true,
+          spaceBetween: 20,
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          //Responsive breakpoints
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+        });
+      </script>
     </div>
   </body>
 </html>

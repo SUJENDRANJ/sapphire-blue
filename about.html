@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="assets/css/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -154,6 +159,682 @@
           <img src="assets/images/slider/shape-5.png" alt="" />
         </div>
       </section>
+
+      <!-- ==== Directors Section with Modern Card Hover & Fade Animation ==== -->
+      <style>
+        .directors_section {
+          padding: 60px 0 50px 0;
+          background: linear-gradient(120deg, #eaf1fb 60%, #f8fafc 100%);
+        }
+
+        .directors_section .top_title h2 {
+          text-align: center;
+          font-size: 2.1em;
+          margin-bottom: 32px;
+          font-weight: 800;
+          letter-spacing: 0.5px;
+          color: #1a237e;
+          animation: fadeInTitle 1s;
+        }
+
+        .directors_grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 28px;
+          justify-content: center;
+        }
+
+        .director_card {
+          background: linear-gradient(135deg, #fff 75%, #e3eafc 100%);
+          border-radius: 20px;
+          box-shadow: 0 6px 28px rgba(44, 62, 80, 0.1);
+          padding: 32px 22px 22px 22px;
+          min-width: 240px;
+          max-width: 290px;
+          flex: 1 1 240px;
+          text-align: center;
+          transition: transform 0.22s cubic-bezier(0.4, 2, 0.6, 1),
+            box-shadow 0.22s;
+          position: relative;
+          overflow: hidden;
+          animation: fadeInDirector 0.9s;
+        }
+
+        .director_card:hover {
+          transform: translateY(-8px) scale(1.04) rotateZ(-0.7deg);
+          box-shadow: 0 14px 38px rgba(44, 62, 80, 0.17);
+          background: linear-gradient(135deg, #e3eafc 70%, #fff 100%);
+        }
+
+        .profile_content h4 {
+          font-size: 1.14em;
+          font-weight: 700;
+          margin-bottom: 7px;
+          color: #263159;
+        }
+
+        .profile_role {
+          display: block;
+          font-size: 1em;
+          color: #3f51b5;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        .profile_content p {
+          font-size: 0.97em;
+          color: #444;
+          margin-bottom: 8px;
+        }
+
+        .profile_contact {
+          font-size: 0.95em;
+          color: #555;
+          margin-top: 6px;
+        }
+
+        .profile_contact span {
+          display: block;
+          margin: 3px 0;
+        }
+
+        @keyframes fadeInDirector {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInTitle {
+          from {
+            opacity: 0;
+            transform: translateY(-18px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media (max-width: 767px) {
+          .directors_grid {
+            flex-direction: column;
+            gap: 16px;
+          }
+          .director_card {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px 10px 14px 10px;
+          }
+          .directors_section {
+            padding: 32px 0 18px 0;
+          }
+        }
+      </style>
+
+      <section class="directors_section">
+        <div class="container">
+          <div class="top_title">
+            <h2>Our Directors</h2>
+          </div>
+          <div class="directors_grid">
+            <!-- Director 1 -->
+            <div class="director_card">
+              <div class="profile_content">
+                <h4>V.M. Krishnamurthi</h4>
+                <span class="profile_role">Founder & Managing Trustee</span>
+                <p>
+                  Agriculturalist and social activist dedicated to the welfare
+                  of village people.
+                </p>
+              </div>
+            </div>
+
+            <!-- Director 2 -->
+            <div class="director_card">
+              <div class="profile_content">
+                <h4>K. Dhanabakiyam</h4>
+                <span class="profile_role">Trustee</span>
+              </div>
+            </div>
+
+            <!-- Director 3 -->
+            <div class="director_card">
+              <div class="profile_content">
+                <h4>V.K. Senthilraja, MBA</h4>
+                <span class="profile_role">Trustee</span>
+                <div class="profile_contact">
+                  <span>📱 9976299999</span>
+                  <span>✉️ sapphireblue5415@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Director 4 -->
+            <div class="director_card">
+              <div class="profile_content">
+                <h4>C. Saranya M.Sc.,<br />M.Phil., SET., (Ph.D)</h4>
+                <span class="profile_role">Trustee & Assistant Professor</span>
+                <div class="profile_contact">
+                  <span>📱 9677777193</span>
+                  <span>✉️ csaranyacdf90@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        body {
+          margin: 0;
+          font-family: "Segoe UI", sans-serif;
+          background: #f9fafe;
+        }
+
+        .project-leads-section {
+          background: linear-gradient(120deg, #f8fafc 60%, #e3eafc 100%);
+          padding: 64px 20px;
+        }
+
+        .top_title h2 {
+          text-align: center;
+          font-size: 2.2em;
+          margin-bottom: 36px;
+          font-weight: 800;
+          letter-spacing: 0.5px;
+          color: #263159;
+          animation: fadeInDownLead 1.1s;
+        }
+
+        .leads-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+          gap: 36px;
+          max-width: 1100px;
+          margin: 0 auto;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .lead-card {
+          background: linear-gradient(135deg, #fff 70%, #eaf1fb 100%);
+          border-radius: 22px;
+          box-shadow: 0 6px 32px rgba(44, 62, 80, 0.11);
+          padding: 36px 28px 56px 28px;
+          position: relative;
+          cursor: pointer;
+          overflow: hidden;
+          transition: transform 0.28s cubic-bezier(0.4, 2, 0.6, 1),
+            box-shadow 0.28s;
+          animation: fadeInLead 1s;
+        }
+
+        .lead-card:not(.active):hover {
+          transform: translateY(-10px) scale(1.04) rotateZ(-0.7deg);
+          box-shadow: 0 14px 38px rgba(44, 62, 80, 0.18);
+          background: linear-gradient(135deg, #e3eafc 70%, #fff 100%);
+        }
+
+        .icon-circle {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #3f51b5 60%, #1a237e 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 18px;
+          box-shadow: 0 2px 12px rgba(63, 81, 181, 0.13);
+        }
+
+        .icon-circle svg {
+          width: 34px;
+          height: 34px;
+          fill: #fff;
+        }
+
+        .lead-card h4 {
+          font-size: 1.18em;
+          font-weight: 700;
+          color: #263159;
+          margin-bottom: 7px;
+          text-align: center;
+        }
+
+        .profile_role {
+          font-size: 1em;
+          color: #3f51b5;
+          font-weight: 600;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .expand-arrow {
+          position: absolute;
+          left: 50%;
+          bottom: 18px;
+          transform: translateX(-50%);
+          font-size: 2em;
+          color: #3f51b5;
+          background: #eaf1fb;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.4s, background 0.2s, color 0.2s;
+          box-shadow: 0 2px 8px rgba(63, 81, 181, 0.07);
+          z-index: 2;
+        }
+
+        .lead-card.active .expand-arrow {
+          transform: translateX(-50%) rotate(180deg) scale(1.1);
+          background: #ff416c;
+          color: #fff;
+        }
+
+        .lead-info {
+          font-size: 1.01em;
+          color: #444;
+          line-height: 1.7;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          margin-top: 0;
+          transition: all 0.5s ease-in-out;
+          text-align: center;
+        }
+
+        .lead-card.active .lead-info {
+          margin-top: 16px;
+          max-height: 300px;
+          opacity: 1;
+        }
+
+        @keyframes fadeInLead {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInDownLead {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media (max-width: 600px) {
+          .expand-arrow {
+            width: 34px;
+            height: 34px;
+            font-size: 1.3em;
+            bottom: 10px;
+          }
+        }
+      </style>
+
+      <section class="project-leads-section">
+        <div class="container">
+          <div class="top_title">
+            <h2>Our Key Project Leads</h2>
+          </div>
+          <div class="leads-grid">
+            <!-- Card 1 -->
+            <div class="lead-card" tabindex="0">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C17 14.17 12.33 13 10 13zm8 0c-.29 0-.62.02-.97.05C17.16 13.41 19 14.28 19 15.5V19h5v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  />
+                </svg>
+              </div>
+              <h4>Women's Empowerment Lead</h4>
+              <div class="profile_role">
+                SHG & Vocational Programs Coordinator
+              </div>
+              <div class="lead-info">
+                Leads tailoring, beauty, and microcredit training for rural
+                women through SHGs. Promotes women-led entrepreneurship and
+                financial independence.
+              </div>
+              <div class="expand-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="lead-card" tabindex="0">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13.09L3.74 10.5 12 6.09l8.26 4.41L12 16.09zM6 17v2h12v-2H6z"
+                  />
+                </svg>
+              </div>
+              <h4>Youth Skill Development Lead</h4>
+              <div class="profile_role">Training & Placement Officer</div>
+              <div class="lead-info">
+                Provides certified, industry-aligned training and placement
+                support. Empowers rural and SC/ST youth with practical job-ready
+                skills and soft skills.
+              </div>
+              <div class="expand-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="lead-card" tabindex="0">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2 4 5v6c0 5.55 4.5 10.74 8 12 3.5-1.26 8-6.45 8-12V5l-8-3zm0 15.1c-2.28-1.02-6-5.13-6-9.1V6.3l6-2.25 6 2.25v1.7c0 3.97-3.72 8.08-6 9.1z"
+                  />
+                </svg>
+              </div>
+              <h4>Women Safety Program Manager</h4>
+              <div class="profile_role">Self-Defense & CPR Trainer</div>
+              <div class="lead-info">
+                Manages the upcoming safety initiative focused on first aid,
+                CPR, and self-defense training. Builds confidence and practical
+                awareness for women's safety.
+              </div>
+              <div class="expand-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="lead-card" tabindex="0">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M10 4V2h4v2h5a2 2 0 0 1 2 2v2H3V6a2 2 0 0 1 2-2h5zm10 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8h16zm-8 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                  />
+                </svg>
+              </div>
+              <h4>Implementation & Strategy Head</h4>
+              <div class="profile_role">District Operations Manager</div>
+              <div class="lead-info">
+                Oversees the execution of training centers in Erode, Salem &
+                Villupuram. Handles mobilization, outreach, and quality
+                assurance of all SBST programs.
+              </div>
+              <div class="expand-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                  <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.querySelectorAll(".lead-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            card.classList.toggle("active");
+          });
+
+          card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              card.click();
+            }
+          });
+        });
+      </script>
+
+      <!-- ==== Empanelled With Section ==== -->
+      <!-- ==== Empanelled With Section ==== -->
+      <section class="empanelled_section section_space">
+        <style>
+          .empanelled_section {
+            background: linear-gradient(to right, #f5f9fd, #e7f0f8);
+            padding: 60px 20px;
+            font-family: "Segoe UI", sans-serif;
+          }
+
+          .empanelled_section .top_title h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a237e;
+            margin-bottom: 30px;
+          }
+
+          .empanelled_list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            list-style: none;
+          }
+
+          .empanelled_list li {
+            font-size: 1.05rem;
+            color: #263159;
+            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px solid #d4e0f1;
+            padding-left: 28px;
+            position: relative;
+          }
+
+          .empanelled_list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #3f51b5;
+            font-size: 1rem;
+            top: 10px;
+          }
+
+          @media (max-width: 600px) {
+            .empanelled_list li {
+              font-size: 1rem;
+              padding-left: 24px;
+            }
+
+            .empanelled_section .top_title h2 {
+              font-size: 1.8rem;
+            }
+          }
+        </style>
+
+        <div class="container">
+          <div class="top_title">
+            <h2 style="font-size: xx-large">Empanelled With</h2>
+          </div>
+          <ul class="empanelled_list">
+            <li>Central Silk Board - Ministry of Textiles</li>
+            <li>Tamil Nadu Skill Development Corporation</li>
+            <li>Ministry of Ayush</li>
+            <li>
+              Development Commissioner of Handicrafts - Ministry of Textiles
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==== Custom Styles for Profile Cards and Sections ==== -->
+      <style>
+        /* Directors Profile Cards */
+        .directors_section .row {
+          gap: 24px 0;
+        }
+        .profile_card {
+          background: #fff;
+          border-radius: 18px;
+          box-shadow: 0 4px 24px rgba(44, 62, 80, 0.1);
+          padding: 28px 18px 18px 18px;
+          margin-bottom: 24px;
+          text-align: center;
+          transition: transform 0.18s, box-shadow 0.18s;
+          min-height: 370px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .profile_card:hover {
+          transform: translateY(-8px) scale(1.03);
+          box-shadow: 0 8px 32px rgba(44, 62, 80, 0.16);
+        }
+        .profile_img {
+          width: 200px;
+          height: 200px;
+          margin: 0 auto 18px auto;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 4px solid #e3e7fa;
+          background: #f3f6fd;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .profile_img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .profile_content h4 {
+          font-size: 1.15em;
+          font-weight: 700;
+          margin-bottom: 6px;
+          color: #263159;
+        }
+        .profile_role {
+          display: block;
+          font-size: 0.98em;
+          color: #3f51b5;
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+        .profile_content p {
+          font-size: 0.97em;
+          color: #444;
+          margin-bottom: 8px;
+        }
+        .profile_contact {
+          font-size: 0.95em;
+          color: #555;
+          margin-top: 6px;
+        }
+        .profile_contact i {
+          color: #3f51b5;
+          margin-right: 4px;
+        }
+        @media (max-width: 991px) {
+          .profile_card {
+            min-height: 340px;
+            padding: 22px 10px 14px 10px;
+          }
+        }
+        @media (max-width: 767px) {
+          .profile_card {
+            min-height: 0;
+            margin-bottom: 18px;
+          }
+        }
+
+        /* Training Centers List */
+        .centers_section .centers_list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .centers_section .centers_list li {
+          background: #e3e7fa;
+          color: #263159;
+          border-radius: 12px;
+          margin: 8px 0;
+          padding: 14px 0;
+          font-weight: 600;
+          text-align: center;
+          font-size: 1.08em;
+          box-shadow: 0 1px 6px rgba(44, 62, 80, 0.04);
+          transition: background 0.2s, color 0.2s;
+        }
+        .centers_section .centers_list li:hover {
+          background: #3f51b5;
+          color: #fff;
+        }
+        @media (max-width: 767px) {
+          .centers_section .centers_list li {
+            font-size: 1em;
+            padding: 10px 0;
+          }
+        }
+
+        /* Empanelled With List */
+        .empanelled_section .empanelled_list {
+          list-style: none;
+          padding: 0;
+          margin: 0 auto;
+          max-width: 600px;
+        }
+        .empanelled_section .empanelled_list li {
+          background: #f3f6fd;
+          color: #263159;
+          border-radius: 10px;
+          margin: 10px 0;
+          padding: 12px 18px;
+          font-weight: 500;
+          font-size: 1.05em;
+          box-shadow: 0 1px 6px rgba(44, 62, 80, 0.04);
+          transition: background 0.2s, color 0.2s;
+        }
+        .empanelled_section .empanelled_list li:hover {
+          background: #1a237e;
+          color: #fff;
+        }
+
+        /* Section Titles */
+        .top_title h2 {
+          font-size: 2em;
+          font-weight: 800;
+          /* color: #1a237e; */
+          margin-bottom: 8px;
+          letter-spacing: 0.5px;
+        }
+        .top_title h3 {
+          font-size: 1.2em;
+          color: #3f51b5;
+          font-weight: 600;
+          margin-bottom: 18px;
+        }
+        @media (max-width: 767px) {
+          .top_title h2 {
+            font-size: 1.3em;
+          }
+          .top_title h3 {
+            font-size: 1em;
+          }
+        }
+      </style>
 
       <!-- ==== service start ==== -->
       <section class="service_section_s4 section_space">
@@ -332,166 +1013,170 @@
         </div>
       </section>
 
-      <!-- ==== team start ==== -->
-      <!-- <!-- <section class="team_section section_space">
+      <!-- ==== Training Centers Section for About Page ==== -->
+      <section class="centers_section">
+        <style>
+          .centers_section {
+            background: linear-gradient(120deg, #f4f8fb 60%, #e9f0fa 100%);
+            padding: 60px 20px;
+            font-family: "Segoe UI", sans-serif;
+          }
+
+          .centers_section .top_title h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a237e;
+            margin-bottom: 30px;
+          }
+
+          .centers_list_wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px 32px;
+            padding: 0 10px;
+          }
+
+          .center_name {
+            font-size: 1.05rem;
+            color: #263159;
+            text-align: center;
+            font-weight: 600;
+            padding: 8px 12px;
+            transition: color 0.3s ease;
+          }
+
+          .center_name:hover {
+            color: #3f51b5;
+          }
+
+          @media (max-width: 600px) {
+            .center_name {
+              font-size: 1rem;
+            }
+          }
+        </style>
+
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="top_title s2">
-                <h2>OUR TEAM MEMBER</h2>
-                <h3>Happy Team Member Meet</h3>
-              </div>
-            </div>
+          <div class="top_title">
+            <h2 style="font-size: xx-large">
+              Our Training Centers in Tamil Nadu
+            </h2>
           </div>
-          <div class="team_wrap">
-            <div class="row">
-              <div class="col col-lg-4 col-md-6 col-12">
-                <div class="team_card">
-                  <div class="image">
-                    <img src="assets/images/team/1.jpg" alt="" />
-                  </div>
-                  <div class="content">
-                    <h2><a href="team-single.html">Porata Barat</a></h2>
-                    <span>Founder</span>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="ti-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-instagram"></i></a>
-                      </li>
-                      <li><span></span></li>
-                      <li>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-vimeo-alt"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="shape">
-                    <svg
-                      version="1.0"
-                      viewBox="0 0 370.000000 351.000000"
-                      preserveAspectRatio="xMidYMid meet"
-                    >
-                      <g
-                        transform="translate(0.000000,351.000000) scale(0.100000,-0.100000)"
-                        stroke="none"
-                      >
-                        <path
-                          d="M891 3499 c-268 -33 -535 -176 -788 -422 l-103 -100 0 -1489 0 -1488
-  1850 0 1850 0 0 1485 0 1486 -62 -52 c-147 -122 -389 -257 -561 -313 -228 -74
-  -489 -76 -668 -5 -198 78 -313 167 -513 401 -142 166 -252 265 -386 350 -193
-  121 -412 173 -619 147z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-4 col-md-6 col-12">
-                <div class="team_card">
-                  <div class="image">
-                    <img src="assets/images/team/2.jpg" alt="" />
-                  </div>
-                  <div class="content">
-                    <h2><a href="team-single.html">Larata Makat</a></h2>
-                    <span>Founder</span>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="ti-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-instagram"></i></a>
-                      </li>
-                      <li><span></span></li>
-                      <li>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-vimeo-alt"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="shape">
-                    <svg
-                      version="1.0"
-                      viewBox="0 0 370.000000 351.000000"
-                      preserveAspectRatio="xMidYMid meet"
-                    >
-                      <g
-                        transform="translate(0.000000,351.000000) scale(0.100000,-0.100000)"
-                        stroke="none"
-                      >
-                        <path
-                          d="M891 3499 c-268 -33 -535 -176 -788 -422 l-103 -100 0 -1489 0 -1488
-  1850 0 1850 0 0 1485 0 1486 -62 -52 c-147 -122 -389 -257 -561 -313 -228 -74
-  -489 -76 -668 -5 -198 78 -313 167 -513 401 -142 166 -252 265 -386 350 -193
-  121 -412 173 -619 147z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-4 col-md-6 col-12">
-                <div class="team_card">
-                  <div class="image">
-                    <img src="assets/images/team/3.jpg" alt="" />
-                  </div>
-                  <div class="content">
-                    <h2><a href="team-single.html">Karat Motana</a></h2>
-                    <span>Founder</span>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="ti-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-instagram"></i></a>
-                      </li>
-                      <li><span></span></li>
-                      <li>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ti-vimeo-alt"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="shape">
-                    <svg
-                      version="1.0"
-                      viewBox="0 0 370.000000 351.000000"
-                      preserveAspectRatio="xMidYMid meet"
-                    >
-                      <g
-                        transform="translate(0.000000,351.000000) scale(0.100000,-0.100000)"
-                        stroke="none"
-                      >
-                        <path
-                          d="M891 3499 c-268 -33 -535 -176 -788 -422 l-103 -100 0 -1489 0 -1488
-  1850 0 1850 0 0 1485 0 1486 -62 -52 c-147 -122 -389 -257 -561 -313 -228 -74
-  -489 -76 -668 -5 -198 78 -313 167 -513 401 -142 166 -252 265 -386 350 -193
-  121 -412 173 -619 147z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+          <div class="centers_list_wrapper">
+            <div class="center_name">Erode</div>
+            <div class="center_name">Salem</div>
+            <div class="center_name">Dharmapuri</div>
+            <div class="center_name">Krishnagiri</div>
+            <div class="center_name">Dindigul</div>
+            <div class="center_name">Namakkal</div>
+            <div class="center_name">Kanyakumari</div>
+            <div class="center_name">Tirupattur</div>
+            <div class="center_name">Chennai</div>
+            <div class="center_name">Kanchipuram</div>
+            <div class="center_name">Perambalur</div>
+            <div class="center_name">Tenkasi</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==== MoUs & Collaborations Section ==== -->
+      <section class="collab_section section_space">
+        <style>
+          .collab_section {
+            background: linear-gradient(to right, #f9fbff, #e8f0fc);
+            padding: 60px 20px;
+            font-family: "Segoe UI", sans-serif;
+          }
+
+          .collab_section .top_title h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a237e;
+            margin-bottom: 40px;
+          }
+
+          .collab_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 10px;
+            align-items: center;
+            justify-items: center;
+          }
+
+          .collab_item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px 14px 14px;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .collab_item:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+          }
+
+          .collab_item img {
+            max-width: 100%;
+            max-height: 90px;
+            margin-bottom: 12px;
+            object-fit: contain;
+          }
+
+          .collab_item span {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #263159;
+            display: block;
+          }
+
+          @media (max-width: 600px) {
+            .collab_item {
+              padding: 14px 10px;
+            }
+
+            .collab_item img {
+              max-height: 60px;
+            }
+          }
+        </style>
+
+        <div class="container">
+          <div class="top_title">
+            <h2 style="font-size: xx-large">
+              <span style="text-transform: none">MoUs</span> & Strategic
+              Collaborations
+            </h2>
+          </div>
+          <div class="collab_grid">
+            <!-- RD National College -->
+            <div class="collab_item">
+              <img
+                src="./assets/images/about/company-1.png"
+                alt="RD National College Logo"
+              />
+              <span>RD National College of Arts & Science</span>
             </div>
-            <div class="team_btn">
-              <a href="team-single.html" class="btn_primary"
-                >View ALL TEAM<i class="ti-arrow-right"></i
-              ></a>
+
+            <!-- Shree Venkateshwara College -->
+            <div class="collab_item">
+              <img
+                src="./assets/images/about/company-2.jpg"
+                alt="Shree Venkateshwara College Logo"
+              />
+              <span>Shree Venkateshwara Arts & Science College, Gobi</span>
             </div>
           </div>
         </div>
-        <div class="bg_shape">
-          <img src="assets/images/team/bg_shape.png" alt="" />
-        </div>
-      </section> -->
+      </section>
 
       <!-- ==== brand start ==== -->
       <!-- <section class="brand_section">
