@@ -167,16 +167,6 @@
           background: linear-gradient(120deg, #eaf1fb 60%, #f8fafc 100%);
         }
 
-        .directors_section .top_title h2 {
-          text-align: center;
-          font-size: 2.1em;
-          margin-bottom: 32px;
-          font-weight: 800;
-          letter-spacing: 0.5px;
-          /* color: #1a237e; */
-          animation: fadeInTitle 1s;
-        }
-
         .directors_grid {
           display: flex;
           flex-wrap: wrap;
@@ -198,6 +188,9 @@
           position: relative;
           overflow: hidden;
           animation: fadeInDirector 0.9s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .director_card:hover {
@@ -617,14 +610,6 @@
             font-family: "Segoe UI", sans-serif;
           }
 
-          .empanelled_section .top_title h2 {
-            text-align: center;
-            /* font-size: 2.2rem;  */
-            font-weight: 800;
-            /* color: #1a237e; */
-            margin-bottom: 30px;
-          }
-
           .empanelled_list {
             max-width: 800px;
             margin: 0 auto;
@@ -643,7 +628,7 @@
           }
 
           .empanelled_list li::before {
-            content: "✔";
+            /* content: "✔"; */
             position: absolute;
             left: 0;
             color: #3f51b5;
@@ -655,10 +640,6 @@
             .empanelled_list li {
               font-size: 1rem;
               padding-left: 24px;
-            }
-
-            .empanelled_section .top_title h2 {
-              /* font-size: 1.8rem; */
             }
           }
         </style>
@@ -807,32 +788,21 @@
           box-shadow: 0 1px 6px rgba(44, 62, 80, 0.04);
           transition: background 0.2s, color 0.2s;
         }
-        .empanelled_section .empanelled_list li:hover {
-          background: #1a237e;
-          color: #fff;
-        }
 
         /* Section Titles */
-        .top_title h2 {
-          font-size: 2em;
-          font-weight: 800;
-          /* color: #1a237e; */
-          margin-bottom: 8px;
-          letter-spacing: 0.5px;
-        }
+
         .top_title h3 {
-          font-size: 1.2em;
-          color: #3f51b5;
-          font-weight: 600;
+          /* color: #3f51b5; */
+          /* font-weight: 600; */
           margin-bottom: 18px;
         }
         @media (max-width: 767px) {
-          .top_title h2 {
+          /* .top_title h2 {
             font-size: 1.3em;
-          }
-          .top_title h3 {
+          } */
+          /* .top_title h3 {
             font-size: 1em;
-          }
+          } */
         }
       </style>
 
@@ -843,7 +813,7 @@
             <div class="col-12">
               <div class="top_title">
                 <h2>OUR KEY INITIATIVES</h2>
-                <h3>Empowering Lives Across Tamil Nadu</h3>
+                <!-- <h3>Empowering Lives Across Tamil Nadu</h3> -->
               </div>
             </div>
           </div>
@@ -1022,13 +992,13 @@
             font-family: "Segoe UI", sans-serif;
           }
 
-          .centers_section .top_title h2 {
+          /* .centers_section .top_title h2 {
             text-align: center;
             font-size: 2.2rem;
             font-weight: 800;
             color: #1a237e;
             margin-bottom: 30px;
-          }
+          } */
 
           .centers_list_wrapper {
             max-width: 800px;
