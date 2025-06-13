@@ -4307,7 +4307,6 @@ img {
   width: 100%;
   height: 100%;
   content: "";
-  background: rgba(18, 137, 153, 0.722);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -8575,6 +8574,8 @@ img {
 @media (max-width: 767px) {
   .blog_single_page {
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .blog_single_page .blog_single_wrap .image {
