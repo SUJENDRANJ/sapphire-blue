@@ -167,6 +167,37 @@
           <img src="assets/images/slider/shape-5.png" alt="" />
         </div>
       </section>
+      <script>
+        const imageUrls = [
+          "assets/images/causes/environment-action.png",
+          "assets/images/blog/kabaddi-match.jpg",
+          "assets/images/services/child-support.jpg",
+          "assets/images/services/market-access.jpg",
+          "assets/images/blog/shg-exhibition.jpg",
+          "assets/images/blog/student-handicrafts.jpg",
+          "assets/images/services/tree.jpg",
+          "assets/images/services/women-empowerment.jpg",
+        ];
+
+        const container = document.querySelector(".page_title_section");
+
+        imageUrls.forEach((url, i) => {
+          const bg = document.createElement("div");
+          bg.className = "bg_slide";
+          bg.style.backgroundImage = `url(${url})`;
+          if (i === 0) bg.classList.add("active");
+          container.appendChild(bg);
+        });
+
+        let current = 0;
+        const slides = document.querySelectorAll(".bg_slide");
+
+        setInterval(() => {
+          slides[current].classList.remove("active");
+          current = (current + 1) % slides.length;
+          slides[current].classList.add("active");
+        }, 2000); // 5 seconds per slide
+      </script>
 
       <!-- ==== blog single start ==== -->
       <!-- ==== blog single start ==== -->
