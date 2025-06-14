@@ -415,35 +415,8 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   height: 560px;
-}
-
-.about_page_title_section {
-  background: url(../images/causes/environment-action.png) center/cover
-    no-repeat;
-}
-.service_page_title_section {
-  background: url(../images/blog/kabaddi-match.jpg) center/cover no-repeat;
-}
-.blog_page_title_section {
-  background: url(../images/services/child-support.jpg) center/cover no-repeat;
-}
-.blog_page_single_title_section {
-  background: url(../images/services/market-access.jpg) center/cover no-repeat;
-}
-.project_page_title_section {
-  background: url(../images/blog/shg-exhibition.jpg) center/cover no-repeat;
-}
-.contact_page_title_section {
-  background: url(../images/blog/student-handicrafts.jpg) center/cover no-repeat;
-}
-.gallery_page_title_section {
-  background: url(../images/services/tree.jpg) center/cover no-repeat;
-}
-.donate_page_title_section {
-  background: url(../images/services/women-empowerment.jpg) center/cover
-    no-repeat;
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
@@ -456,6 +429,22 @@ img {
     height: 450px;
   }
 }
+
+/* === Background Image Carousel Slides === */
+.bg_slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+.bg_slide.active {
+  opacity: 1;
+}
+
+/* === Gradient Overlay === */
 .page_title_section::before {
   position: absolute;
   left: 0;
@@ -464,8 +453,14 @@ img {
   height: 100%;
   content: "";
   background: linear-gradient(92deg, rgb(32, 65, 66) 0%, rgb(126, 74, 49) 100%);
-  z-index: -1;
+  z-index: 1;
   opacity: 0.762;
+}
+
+/* === Content Area === */
+.page_title_section .container {
+  position: relative;
+  z-index: 2;
 }
 .page_title_section .content {
   margin-top: 100px;
@@ -520,13 +515,21 @@ img {
 }
 .page_title_section .content ul li a {
   font-size: 19px;
+  z-index: 2;
   color: #ffffff;
 }
+
+/* === Shape Image === */
 .page_title_section .shape {
   position: absolute;
   left: 30px;
   top: 40%;
-  z-index: -11;
+  z-index: 1;
+  pointer-events: none;
+}
+.page_title_section .shape img {
+  max-width: 100%;
+  height: auto;
 }
 @media (max-width: 991px) {
   .page_title_section .shape {
