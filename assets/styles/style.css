@@ -415,9 +415,37 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: url(../images/slider/slider-1.jpg) center/cover no-repeat;
-  height: 540px;
+
+  height: 560px;
 }
+
+.about_page_title_section {
+  background: url(../images/causes/environment-action.png) center/cover
+    no-repeat;
+}
+.service_page_title_section {
+  background: url(../images/blog/kabaddi-match.jpg) center/cover no-repeat;
+}
+.blog_page_title_section {
+  background: url(../images/blog/handloom-training.jpg) center/cover no-repeat;
+}
+.blog_page_single_title_section {
+  background: url(../images/services/market-access.jpg) center/cover no-repeat;
+}
+.project_page_title_section {
+  background: url(../images/blog/shg-exhibition.jpg) center/cover no-repeat;
+}
+.contact_page_title_section {
+  background: url(../images/blog/student-handicrafts.jpg) center/cover no-repeat;
+}
+.gallery_page_title_section {
+  background: url(../images/services/tree.jpg) center/cover no-repeat;
+}
+.donate_page_title_section {
+  background: url(../images/services/women-empowerment.jpg) center/cover
+    no-repeat;
+}
+
 @media (max-width: 991px) {
   .page_title_section {
     height: 500px;
