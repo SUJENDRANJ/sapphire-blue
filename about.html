@@ -632,7 +632,6 @@
       </script>
 
       <!-- ==== Empanelled With Section ==== -->
-      <!-- ==== Empanelled With Section ==== -->
       <section class="empanelled_section section_space">
         <style>
           .empanelled_section {
@@ -665,6 +664,12 @@
             color: #3f51b5;
             font-size: 1rem;
             top: 10px;
+          }
+
+          .empanelled_list li:not(.active):hover {
+            transform: translateY(-10px) scale(1.04) rotateZ(-0.7deg);
+            box-shadow: 0 14px 38px rgba(44, 62, 80, 0.18);
+            background: linear-gradient(135deg, #e3eafc 70%, #fff 100%);
           }
 
           @media (max-width: 600px) {
