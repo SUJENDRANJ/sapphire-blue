@@ -288,7 +288,6 @@
         }
 
         @media (max-width: 767px) {
-          
           .director_card {
             max-width: 90%;
             margin: 0 auto;
@@ -629,58 +628,109 @@
       </script>
 
       <!-- ==== Empanelled With Section ==== -->
-      <section class="empanelled_section section_space">
-        <style>
-          .empanelled_section {
-            background: linear-gradient(to right, #f5f9fd, #e7f0f8);
-            padding: 60px 20px;
-            font-family: "Segoe UI", sans-serif;
-          }
 
-          .empanelled_list {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            list-style: none;
-          }
+      <style>
+        .empanelled_section {
+          background: linear-gradient(to right, #f5f9fd, #e7f0f8);
+          padding: 60px 20px;
+          font-family: "Segoe UI", sans-serif;
+        }
 
+        .empanelled_list {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 20px;
+          list-style: none;
+        }
+
+        .empanelled_list li {
+          font-size: 1.05rem;
+          color: #263159;
+          font-weight: 600;
+          padding: 10px 0;
+          border-bottom: 1px solid #d4e0f1;
+          padding-left: 28px;
+          position: relative;
+        }
+
+        .empanelled_list li::before {
+          /* content: "✔"; */
+          position: absolute;
+          left: 0;
+          color: #3f51b5;
+          font-size: 1rem;
+          top: 10px;
+        }
+
+        .empanelled_list li:not(.active):hover {
+          transform: translateY(-10px) scale(1.04) rotateZ(-0.7deg);
+          box-shadow: 0 14px 38px rgba(44, 62, 80, 0.18);
+          background: linear-gradient(135deg, #e3eafc 70%, #fff 100%);
+        }
+
+        /* New Styles for Logos */
+        .empanelled_logos {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 30px;
+          justify-items: center;
+          align-items: center;
+          margin-top: 40px;
+          padding: 0 20px;
+        }
+
+        .empanelled_logos div {
+          text-align: center;
+          background: #ffffff;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .empanelled_logos div:hover {
+          transform: translateY(-8px) scale(1.03);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .empanelled_logos img {
+          height: 80px;
+          width: 140px; /* Fixed width */
+          object-fit: contain;
+          margin-bottom: 10px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .empanelled_logos p {
+          font-size: 1rem;
+          color: #263159;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        @media (max-width: 600px) {
           .empanelled_list li {
-            font-size: 1.05rem;
-            color: #263159;
-            font-weight: 600;
-            padding: 10px 0;
-            border-bottom: 1px solid #d4e0f1;
-            padding-left: 28px;
-            position: relative;
-          }
-
-          .empanelled_list li::before {
-            /* content: "✔"; */
-            position: absolute;
-            left: 0;
-            color: #3f51b5;
             font-size: 1rem;
-            top: 10px;
+            padding-left: 24px;
           }
 
-          .empanelled_list li:not(.active):hover {
-            transform: translateY(-10px) scale(1.04) rotateZ(-0.7deg);
-            box-shadow: 0 14px 38px rgba(44, 62, 80, 0.18);
-            background: linear-gradient(135deg, #e3eafc 70%, #fff 100%);
+          .empanelled_logos div {
+            padding: 15px;
           }
 
-          @media (max-width: 600px) {
-            .empanelled_list li {
-              font-size: 1rem;
-              padding-left: 24px;
-            }
+          .empanelled_logos p {
+            font-size: 0.9rem;
           }
-        </style>
+        }
+      </style>
 
+      <section class="empanelled_section section_space">
         <div class="container">
           <div class="top_title">
             <h2>Empanelled With</h2>
           </div>
+
           <ul class="empanelled_list">
             <li>Central Silk Board - Ministry of Textiles</li>
             <li>Tamil Nadu Skill Development Corporation</li>
@@ -689,6 +739,32 @@
               Development Commissioner of Handicrafts - Ministry of Textiles
             </li>
           </ul>
+
+          <!-- Logos Section -->
+          <div class="empanelled_logos">
+            <div>
+              <img
+                src="assets/images/about/emp-1.png"
+                alt="Central Silk Board"
+              />
+              <p>Central Silk Board</p>
+            </div>
+            <div>
+              <img src="assets/images/about/emp-2.jpg" alt="TNSDC" />
+              <p>TNSDC</p>
+            </div>
+            <div>
+              <img
+                src="assets/images/about/emp-3.png"
+                alt="Ministry of AYUSH"
+              />
+              <p>Ministry of AYUSH</p>
+            </div>
+            <div>
+              <img src="assets/images/about/emp-4.png" alt="Handicrafts" />
+              <p>Indian Handicrafts</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -949,7 +1025,9 @@
                   <div class="content">
                     <h2>Awareness Campaigns</h2>
                     <p>
-                      Conducting awareness programs on sericulture, handloom businesses, voting rights, eco-living, and women’s empowerment.
+                      Conducting awareness programs on sericulture, handloom
+                      businesses, voting rights, eco-living, and women’s
+                      empowerment.
                     </p>
                   </div>
                 </div>
@@ -1016,15 +1094,14 @@
       </section>
 
       <!-- ==== Training Centers Section for About Page ==== -->
-      <section class="centers_section">
-        <style>
-          .centers_section {
-            background: linear-gradient(120deg, #f4f8fb 60%, #e9f0fa 100%);
-            padding: 60px 20px;
-            font-family: "Segoe UI", sans-serif;
-          }
+      <style>
+        .centers_section {
+          background: linear-gradient(120deg, #f4f8fb 60%, #e9f0fa 100%);
+          padding: 60px 20px;
+          font-family: "Segoe UI", sans-serif;
+        }
 
-          /* .centers_section .top_title h2 {
+        /* .centers_section .top_title h2 {
             text-align: center;
             font-size: 2.2rem;
             font-weight: 800;
@@ -1032,35 +1109,36 @@
             margin-bottom: 30px;
           } */
 
-          .centers_list_wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 16px 32px;
-            padding: 0 10px;
-          }
+        .centers_list_wrapper {
+          max-width: 800px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 16px 32px;
+          padding: 0 10px;
+        }
 
+        .center_name {
+          font-size: 1.05rem;
+          color: #263159;
+          text-align: center;
+          font-weight: 600;
+          padding: 8px 12px;
+          transition: color 0.3s ease;
+        }
+
+        .center_name:hover {
+          color: #3f51b5;
+        }
+
+        @media (max-width: 600px) {
           .center_name {
-            font-size: 1.05rem;
-            color: #263159;
-            text-align: center;
-            font-weight: 600;
-            padding: 8px 12px;
-            transition: color 0.3s ease;
+            font-size: 1rem;
           }
+        }
+      </style>
 
-          .center_name:hover {
-            color: #3f51b5;
-          }
-
-          @media (max-width: 600px) {
-            .center_name {
-              font-size: 1rem;
-            }
-          }
-        </style>
-
+      <section class="centers_section">
         <div class="container">
           <div class="top_title">
             <h2>Our Training Centers in Tamil Nadu</h2>
