@@ -1094,14 +1094,15 @@
       </section>
 
       <!-- ==== Training Centers Section for About Page ==== -->
-      <style>
-        .centers_section {
-          background: linear-gradient(120deg, #f4f8fb 60%, #e9f0fa 100%);
-          padding: 60px 20px;
-          font-family: "Segoe UI", sans-serif;
-        }
+      <section class="centers_section">
+        <style>
+          .centers_section {
+            background: linear-gradient(120deg, #f4f8fb 60%, #e9f0fa 100%);
+            padding: 60px 20px;
+            font-family: "Segoe UI", sans-serif;
+          }
 
-        /* .centers_section .top_title h2 {
+          /* .centers_section .top_title h2 {
             text-align: center;
             font-size: 2.2rem;
             font-weight: 800;
@@ -1109,57 +1110,169 @@
             margin-bottom: 30px;
           } */
 
-        .centers_list_wrapper {
-          max-width: 800px;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-          gap: 16px 32px;
-          padding: 0 10px;
-        }
-
-        .center_name {
-          font-size: 1.05rem;
-          color: #263159;
-          text-align: center;
-          font-weight: 600;
-          padding: 8px 12px;
-          transition: color 0.3s ease;
-        }
-
-        .center_name:hover {
-          color: #3f51b5;
-        }
-
-        @media (max-width: 600px) {
-          .center_name {
-            font-size: 1rem;
+          .centers_list_wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px 32px;
+            padding: 0 10px;
           }
-        }
-      </style>
 
-      <section class="centers_section">
+          .center_name {
+            font-size: 1.05rem;
+            color: #263159;
+            text-align: center;
+            font-weight: 600;
+            padding: 8px 12px;
+            transition: color 0.3s ease;
+          }
+
+          .center_name:hover {
+            color: #3f51b5;
+          }
+
+          @media (max-width: 600px) {
+            .center_name {
+              font-size: 1rem;
+            }
+          }
+          .image-grid-wrapper {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(150px, 10fr));
+            gap: 20px;
+          }
+
+          .img-tile {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+          }
+
+          .img-tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+          }
+
+          .img-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease;
+          }
+
+          .tile-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 800;
+            font-family: "Poppins", sans-serif;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: 0.4s ease;
+          }
+          .tile-caption:hover {
+            curser: pointer;
+            background: rgba(0, 0, 0, 0.6);
+          }
+
+          .img-tile:hover .tile-caption {
+            background: rgba(0, 0, 0, 0.6);
+          }
+
+          @media (max-width: 600px) {
+            .tile-caption {
+              font-size: 0.95rem;
+            }
+          }
+        </style>
+
         <div class="container">
           <div class="top_title">
             <h2>Our Training Centers in Tamil Nadu</h2>
           </div>
-          <div class="centers_list_wrapper">
-            <div class="center_name">Erode</div>
-            <div class="center_name">Salem</div>
-            <div class="center_name">Dharmapuri</div>
-            <div class="center_name">Krishnagiri</div>
-            <div class="center_name">Dindigul</div>
-            <div class="center_name">Namakkal</div>
-            <div class="center_name">Kanyakumari</div>
-            <div class="center_name">Tirupattur</div>
-            <div class="center_name">Chennai</div>
-            <div class="center_name">Kanchipuram</div>
-            <div class="center_name">Perambalur</div>
-            <div class="center_name">Tenkasi</div>
+          <div class="image-grid-wrapper">
+            <!-- 12 Unique Image Tiles -->
+            <div class="img-tile">
+              <img src="assets/images/Location/Erode.jpg" alt="Erode" />
+              <div class="tile-caption">Erode</div>
+            </div>
+            <div class="img-tile">
+              <img src="assets/images/Location/Selam.jpg" alt="Selam" />
+              <div class="tile-caption">Selam</div>
+            </div>
+            <div class="img-tile">
+              <img
+                src="assets/images/Location/Dharmapuri.jpg"
+                alt="Dharmapuri"
+              />
+              <div class="tile-caption">Dharmapuri</div>
+            </div>
+            <div class="img-tile">
+              <img
+                src="assets/images/Location/Krishnagiri.jpg"
+                alt="Krishnagiri"
+              />
+              <div class="tile-caption">Krishnagiri</div>
+            </div>
+            <div class="img-tile">
+              <img src="assets/images/Location/Dindigul.jpg" alt="Dindigul" />
+              <div class="tile-caption">Dindigul</div>
+            </div>
+            <div class="img-tile">
+              <img src="assets/images/Location/Namakkal.jpg" alt="Namakkal" />
+              <div class="tile-caption">Namakkal</div>
+            </div>
+            <div class="img-tile">
+              <img
+                src="assets/images/Location/Kanyakumari.jpg"
+                alt="Kanyakumari"
+              />
+              <div class="tile-caption">Kanyakumari</div>
+            </div>
+            <div class="img-tile">
+              <img
+                src="assets/images/Location/Tirupattur.jpg"
+                alt="Tirupattur"
+              />
+              <div class="tile-caption">Tirupattur</div>
+            </div>
+            <div class="img-tile">
+              <img src="assets/images/Location/Chennai.jpg" alt="Chennai" />
+              <div class="tile-caption">Chennai</div>
+            </div>
+            <div class="img-tile">
+              <img
+                src="assets/images/Location/Kanchipuram.jpg"
+                alt="Kanchipuram"
+              />
+              <div class="tile-caption">Kanchipuram</div>
+            </div>
+            <div class="img-tile">
+              <img
+                src="assets/images/Location/Perambalur.jpg"
+                alt="Perambalur"
+              />
+              <div class="tile-caption">Perambalur</div>
+            </div>
+            <div class="img-tile">
+              <img src="assets/images/Location/Tenkasi.jpg" alt="Tenkasi" />
+              <div class="tile-caption">Tenkasi</div>
+            </div>
           </div>
         </div>
       </section>
-
       <!-- ==== MoUs & Collaborations Section ==== -->
       <section class="collab_section section_space">
         <style>

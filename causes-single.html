@@ -832,6 +832,100 @@
         </div>
       </section>
 
+      <!-- Confirmation Modal -->
+      <style>
+        .donation-modal {
+          display: none;
+          position: fixed;
+          z-index: 9999;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4);
+          justify-content: center;
+          align-items: center;
+          transition: opacity 0.3s ease;
+        }
+
+        .donation-modal.show {
+          display: flex;
+        }
+
+        .modal-content {
+          background: #fff;
+          padding: 30px 20px;
+          border-radius: 12px;
+          text-align: center;
+          width: 90%;
+          max-width: 400px;
+          height: 300px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* Spinner Styling */
+        .spinner {
+          border: 4px solid #e0e0e0;
+          border-top: 4px solid #2f2f2f;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+          animation: spin 1s linear infinite;
+          margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .modal-content h2 {
+          color: #2e7d32;
+          margin-bottom: 10px;
+          font-size: 1.5em;
+        }
+
+        .modal-content p {
+          color: #444;
+          font-size: 1rem;
+        }
+      </style>
+      <!-- Confirmation Modal -->
+      <div id="donationModal" class="donation-modal">
+        <div class="modal-content">
+          <div class="spinner"></div>
+          <h2>🙏 Thank You!</h2>
+          <p>
+            Your donation has been received. Your support means the world to us.
+          </p>
+        </div>
+      </div>
+
+      <script>
+        const form = document.querySelector(".donet_from");
+        const modal = document.getElementById("donationModal");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          modal.classList.add("show");
+
+          setTimeout(() => {
+            modal.classList.remove("show");
+          }, 10000);
+
+          form.reset();
+        });
+      </script>
+
       <!-- ==== footer starts ====  -->
       <section class="footer_section">
         <div class="footer_top">
