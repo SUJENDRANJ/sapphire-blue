@@ -721,83 +721,6 @@
                 </form>
 
                 <!-- OR Divider -->
-                <div
-                  style="
-                    text-align: center;
-                    margin: 18px 0;
-                    font-weight: bold;
-                    color: #888;
-                  "
-                >
-                  OR
-                </div>
-
-                <!-- Bank Details -->
-                <div
-                  class="widget_causes"
-                  style="
-                    background: #e3f2fd;
-                    padding: 20px 18px;
-                    border-radius: 12px;
-                    margin-bottom: 30px;
-                  "
-                >
-                  <div class="donet_btn" style="margin-bottom: 10px">
-                    <h3 style="margin-bottom: 10px; font-size: 1.5em">
-                      Bank Details
-                    </h3>
-                    <ul style="list-style: none; padding: 0">
-                      <li style="font-size: 1.3em; font-weight: bold">
-                        Sapphire Blue Social Trust
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="title" style="margin-bottom: 0">
-                    <table
-                      style="
-                        width: 100%;
-                        font-size: 1.2em;
-                        background: #fff;
-                        border-radius: 8px;
-                        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-                        border-collapse: separate;
-                        border-spacing: 0;
-                        margin-bottom: 0;
-                      "
-                    >
-                      <tr>
-                        <td
-                          style="
-                            font-weight: bold;
-                            padding: 10px 8px;
-                            width: 180px;
-                          "
-                        >
-                          Account Number:
-                        </td>
-                        <td style="padding: 10px 8px">002502000014913</td>
-                      </tr>
-                      <tr>
-                        <td style="font-weight: bold; padding: 10px 8px">
-                          IFSC Code:
-                        </td>
-                        <td style="padding: 10px 8px">I0BA0000025</td>
-                      </tr>
-                      <tr>
-                        <td style="font-weight: bold; padding: 10px 8px">
-                          Branch:
-                        </td>
-                        <td style="padding: 10px 8px">Erode Main Branch</td>
-                      </tr>
-                      <tr>
-                        <td style="font-weight: bold; padding: 10px 8px">
-                          Bank:
-                        </td>
-                        <td style="padding: 10px 8px">Indian Overseas Bank</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
 
                 <!-- Motivation Text -->
                 <div class="top_content" style="margin-bottom: 18px">
@@ -842,40 +765,33 @@
           top: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 0, 0, 0.4);
+          background: rgba(0, 0, 0, 0.5);
           justify-content: center;
           align-items: center;
-          transition: opacity 0.3s ease;
         }
 
         .donation-modal.show {
-          display: flex;
-        }
-
-        .modal-content {
-          background: #fff;
-          padding: 30px 20px;
-          border-radius: 12px;
-          text-align: center;
-          width: 90%;
-          max-width: 400px;
-          height: 300px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
 
-        /* Spinner Styling */
+        .spinner-container {
+          background: white;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
         .spinner {
-          border: 4px solid #e0e0e0;
-          border-top: 4px solid #2f2f2f;
+          border: 5px solid #f3f3f3;
+          border-top: 5px solid #2e7d32;
           border-radius: 50%;
           width: 48px;
           height: 48px;
           animation: spin 1s linear infinite;
-          margin-bottom: 20px;
+          margin: 0 auto;
         }
 
         @keyframes spin {
@@ -887,43 +803,215 @@
           }
         }
 
-        .modal-content h2 {
-          color: #2e7d32;
-          margin-bottom: 10px;
-          font-size: 1.5em;
+        .modal-content {
+          background: #fff;
+          padding: 26px 20px;
+          border-radius: 10px;
+          max-width: 620px;
+          width: 90%;
+          text-align: center;
+          position: relative;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
-        .modal-content p {
-          color: #444;
-          font-size: 1rem;
+        .timer-text {
+          color: red;
+          font-weight: bold;
+          font-size: 1.1rem;
+          margin-bottom: 14px;
+        }
+
+        .cancel-btn {
+          position: absolute;
+          bottom: 16px;
+          right: 16px;
+          background: #d32f2f;
+          color: #fff;
+          border: none;
+          padding: 8px 14px;
+          font-size: 0.9rem;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        .donation-modal .modalcard {
+          background: #ffffff;
+          padding: 2rem;
+          border-radius: 16px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          width: 90%;
+          max-width: 700px;
+          height: 75vh; /* 3/4th of the viewport height */
+          overflow-y: auto;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
       </style>
-      <!-- Confirmation Modal -->
+      <!-- Donation Modal -->
       <div id="donationModal" class="donation-modal">
-        <div class="modal-content">
+        <!-- Spinner shown first -->
+        <div class="spinner-container" id="spinnerContainer">
           <div class="spinner"></div>
-          <h2>🙏 Thank You!</h2>
-          <p>
-            Your donation has been received. Your support means the world to us.
-          </p>
+        </div>
+
+        <!-- Modal card after loading -->
+        <div class="modal-content" id="modalCard" style="display: none">
+          <div
+            style="
+              text-align: center;
+              margin: 5px 0;
+              font-weight: bold;
+              color: #888;
+            "
+          >
+            Even A Rupee Makes a Count
+          </div>
+
+          <!-- Bank Details -->
+          <div
+            class="widget_causes"
+            style="
+              background: #e3f2fd;
+              padding: 20px 18px;
+              border-radius: 12px;
+              margin-bottom: 30px;
+            "
+          >
+            <div class="donet_btn" style="margin-bottom: 10px">
+              <h3 style="margin-bottom: 10px; font-size: 1.5em">
+                Bank Details
+              </h3>
+              <ul style="list-style: none; padding: 0">
+                <li style="font-size: 1.3em; font-weight: bold">
+                  Sapphire Blue Social Trust
+                </li>
+              </ul>
+            </div>
+            <div class="title" style="margin-bottom: 0">
+              <table
+                style="
+                  width: 100%;
+                  font-size: 1.2em;
+                  background: #fff;
+                  border-radius: 8px;
+                  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+                  border-collapse: separate;
+                  border-spacing: 0;
+                  margin-bottom: 0;
+                "
+              >
+                <tr>
+                  <td
+                    style="font-weight: bold; padding: 10px 8px; width: 180px"
+                  >
+                    Account Number:
+                  </td>
+                  <td style="padding: 10px 8px">002502000014913</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; padding: 10px 8px">
+                    IFSC Code:
+                  </td>
+                  <td style="padding: 10px 8px">I0BA0000025</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; padding: 10px 8px">Branch:</td>
+                  <td style="padding: 10px 8px">Erode Main Branch</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; padding: 10px 8px">Bank:</td>
+                  <td style="padding: 10px 8px">Indian Overseas Bank</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <button id="cancelBtn" class="cancel-btn">Cancel</button>
         </div>
       </div>
 
       <script>
         const form = document.querySelector(".donet_from");
         const modal = document.getElementById("donationModal");
+        const spinnerContainer = document.getElementById("spinnerContainer");
+        const modalCard = document.getElementById("modalCard");
+        const timerText = document.getElementById("timerText");
+        const cancelBtn = document.getElementById("cancelBtn");
+
+        let timerInterval;
 
         form.addEventListener("submit", function (e) {
           e.preventDefault();
 
           modal.classList.add("show");
+          spinnerContainer.style.display = "block";
+          modalCard.style.display = "none";
 
+          // Show spinner for 3 seconds
           setTimeout(() => {
-            modal.classList.remove("show");
-          }, 10000);
+            spinnerContainer.style.display = "none";
+            modalCard.style.display = "block";
+            startCountdown(120); // 2 minutes countdown
+          }, 3000);
 
           form.reset();
         });
+
+        function startCountdown(seconds) {
+          let remaining = seconds;
+          updateTimerDisplay(remaining);
+
+          timerInterval = setInterval(() => {
+            remaining--;
+            updateTimerDisplay(remaining);
+
+            if (remaining <= 0) {
+              clearInterval(timerInterval);
+              timerText.textContent = "Redirecting...";
+              setTimeout(() => {
+                modal.classList.remove("show");
+              }, 1500);
+            }
+          }, 1000);
+        }
+
+        function updateTimerDisplay(seconds) {
+          const mins = Math.floor(seconds / 60);
+          const secs = seconds % 60;
+          timerText.textContent = `Time remaining: ${mins}:${secs
+            .toString()
+            .padStart(2, "0")}`;
+        }
+
+        cancelBtn.addEventListener("click", () => {
+          clearInterval(timerInterval);
+          modal.classList.remove("show");
+        });
+
+        function startCountdown(seconds) {
+          let remaining = seconds;
+          updateTimerDisplay(remaining);
+
+          timerInterval = setInterval(() => {
+            remaining--;
+            updateTimerDisplay(remaining);
+
+            if (remaining <= 0) {
+              clearInterval(timerInterval);
+
+              // Change text to Redirecting...
+              timerText.textContent = "Redirecting...";
+              timerText.style.color = "#d32f2f"; // red color
+
+              // After 1.5 seconds, close modal
+              setTimeout(() => {
+                modal.classList.remove("show");
+              }, 1500);
+            }
+          }, 1000);
+        }
       </script>
 
       <!-- ==== footer starts ====  -->
