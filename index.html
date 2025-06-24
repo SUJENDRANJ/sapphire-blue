@@ -42,6 +42,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </head>
 
   <body>
@@ -1732,6 +1734,13 @@
       </section>
 
       <!-- ==== contact start ==== -->
+
+      <script>
+        (function () {
+          emailjs.init("6fgq3ZgYrgI9-8Ah9"); // Replace with your actual public key
+        })();
+      </script>
+
       <section class="contact_section">
         <div class="container-fluid">
           <div class="row">
@@ -1740,16 +1749,19 @@
                 <img src="aaaaaaa/support.png" alt="Contact Us" />
               </div>
             </div>
+
             <div class="col-xl-4 col-lg-6 col-md-6 col-12">
               <div class="contact_from">
                 <div class="title">
                   <h2>Request Support</h2>
                   <span>We’re here 24/7 to assist you</span>
                 </div>
-                <form class="from_wrap">
+
+                <form id="supportForm" class="from_wrap">
                   <div>
                     <input
                       type="text"
+                      name="user_name"
                       class="form-control"
                       placeholder="Your Name*"
                       required
@@ -1758,6 +1770,7 @@
                   <div>
                     <input
                       type="tel"
+                      name="user_phone"
                       class="form-control"
                       placeholder="Phone Number*"
                       required
@@ -1766,6 +1779,7 @@
                   <div>
                     <input
                       type="date"
+                      name="preferred_date"
                       class="form-control"
                       placeholder="Preferred Date"
                     />
@@ -1773,13 +1787,14 @@
                   <div>
                     <input
                       type="email"
+                      name="user_email"
                       class="form-control"
                       placeholder="Email Address*"
                       required
                     />
                   </div>
                   <div>
-                    <select class="form-control" required>
+                    <select name="gender" class="form-control" required>
                       <option value="" disabled selected>Gender*</option>
                       <option>Male</option>
                       <option>Female</option>
@@ -1794,6 +1809,7 @@
                 </form>
               </div>
             </div>
+
             <div class="col-xl-4 col-lg-6 col-md-6 col-12">
               <div class="map_right">
                 <div class="map">
@@ -1812,6 +1828,27 @@
         </div>
       </section>
 
+      <!-- EmailJS Submission Script -->
+      <script>
+        document
+          .getElementById("supportForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+              function () {
+                alert("✅ Your request was sent successfully!");
+                document.getElementById("supportForm").reset();
+              },
+              function (error) {
+                alert(
+                  "❌ Failed to send request. Please try again.\n" +
+                    JSON.stringify(error)
+                );
+              }
+            );
+          });
+      </script>
       <!-- ==== contact info start ==== -->
       <section class="contact_info_section">
         <div class="container">
@@ -1828,6 +1865,7 @@
                 <div class="content">
                   <h2>Call This Now</h2>
                   <span>+91 99762 9999</span>
+                  <span>+91 96777 77193</span>
                 </div>
               </div>
             </div>
