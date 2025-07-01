@@ -502,13 +502,21 @@
           }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
           .expand-arrow {
             width: 34px;
             height: 34px;
             font-size: 1.3em;
             bottom: 10px;
           }
+
+          .key-project {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+        .key-project {
+          display: flex;
         }
       </style>
 
@@ -574,7 +582,7 @@
             <h2>Our Key Project Leads</h2>
             <h3>Driving Impactful Change Across Tamil Nadu</h3>
           </div>
-          <div style="display: flex" class="leads-grid">
+          <div class="leads-grid key-project">
             <!-- Card 1 -->
             <div class="lead-card" tabindex="0">
               <div class="icon-circle">
@@ -763,6 +771,11 @@
             font-size: 0.9rem;
           }
         }
+
+        .empanelled_logos-single {
+          display: flex;
+          flex-wrap: wrap;
+        }
       </style>
 
       <section class="empanelled_section section_space">
@@ -772,33 +785,43 @@
           </div>
 
           <!-- Logos Section -->
-          <div class="empanelled_logos">
+          <div
+            class="empanelled_logos"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            "
+          >
             <div>
-              <img
-                src="assets/images/about/emp-1.png"
-                alt="Central Silk Board"
-              />
-              <img
-                src="assets/images/about/emp-1(1).png"
-                alt="Central Silk Board"
-              />
-              <p>Central Silk Board, Ministry of Textiles, Bangalore</p>
+              <div class="empanelled_logos-single">
+                <img
+                  src="assets/images/about/emp-1.png"
+                  alt="Central Silk Board"
+                />
+                <img
+                  src="assets/images/about/emp-1(1).png"
+                  alt="Central Silk Board"
+                />
+              </div>
+              <h6>Central Silk Board, Ministry of Textiles, Bangalore</h6>
             </div>
-            <div style="display: flex; flex-direction: column">
-              <div>
+            <div style="width: 500px">
+              <div class="empanelled_logos-single">
                 <img src="assets/images/about/emp-2(3).jpg" alt="TNSDC" />
                 <img src="assets/images/about/emp-2(1).png" alt="TNSDC" />
                 <img src="assets/images/about/emp-2(2).png" alt="TNSDC" />
               </div>
 
-              <p>Tamilnadu Skill Development Corporation</p>
+              <h6>Tamilnadu Skill Development Corporation</h6>
             </div>
             <div>
               <img
                 src="assets/images/about/emp-3.png"
                 alt="Ministry of AYUSH"
               />
-              <p>Ministry of AYUSH</p>
+              <h6>Ministry of AYUSH</h6>
             </div>
             <div>
               <img src="assets/images/about/emp-4.png" alt="Handicrafts" />
@@ -1330,13 +1353,13 @@
                   <h2>Contact Us</h2>
 
                   <div>
-                    <span>Phone: +91 99762 9999</span><br />
+                    <span>Phone: +91 99762 99999</span><br />
                     <span>Phone: +91 98945 35100</span><br />
                     <span>Phone: +91 96777 77193</span>
                   </div>
                   <div>
                     <span>Email: sapphirebluesocialtrust@gmail.com</span><br />
-                    <span>Website: www.sapphirebluesocialtrust.org</span>
+                    <span>Website: www.sbstngo.com</span>
                   </div>
                 </div>
               </div>
