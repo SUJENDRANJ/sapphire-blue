@@ -649,83 +649,103 @@
               </div>
               <div class="wrap">
                 <!-- Donation Form First -->
-                <form
-                  class="donet_from"
+                <div
                   style="
-                    margin-bottom: 30px;
-                    background: #f9f9f9;
-                    padding: 24px 18px;
-                    border-radius: 12px;
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                    text-align: center;
+                    margin: 50px 0;
+                    font-weight: bold;
+                    color: #888;
                   "
                 >
-                  <div style="margin-bottom: 18px">
-                    <input
-                      class="from-contol"
-                      type="text"
-                      placeholder="Full Name *"
-                      required
-                      style="
-                        width: 100%;
-                        padding: 10px;
-                        margin-bottom: 10px;
-                        border-radius: 6px;
-                        border: 1px solid #ccc;
-                      "
-                    />
-                    <input
-                      class="from-contol"
-                      type="email"
-                      placeholder="Email *"
-                      required
-                      style="
-                        width: 100%;
-                        padding: 10px;
-                        margin-bottom: 10px;
-                        border-radius: 6px;
-                        border: 1px solid #ccc;
-                      "
-                    />
-                    <input
-                      class="from-contol"
-                      type="number"
-                      placeholder="Amount (₹) *"
-                      required
-                      style="
-                        width: 100%;
-                        padding: 10px;
-                        margin-bottom: 10px;
-                        border-radius: 6px;
-                        border: 1px solid #ccc;
-                      "
-                    />
+                  Even A Rupee Makes a Count
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <!-- Bank Details -->
+                  <div
+                    class="widget_causes"
+                    style="
+                      background: #e3f2fd;
+                      padding: 30px 48px;
+                      border-radius: 12px;
+                      margin-bottom: 30px;
+                    "
+                  >
+                    <div class="donet_btn" style="margin-bottom: 10px">
+                      <h3 style="margin-bottom: 10px; font-size: 1.5em">
+                        Bank Details
+                      </h3>
+                      <ul style="list-style: none; padding: 0">
+                        <li style="font-size: 1.3em; font-weight: bold">
+                          Sapphire Blue Social Trust
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="title" style="margin-bottom: 0">
+                      <table
+                        style="
+                          width: 100%;
+                          font-size: 1.2em;
+                          background: #fff;
+                          border-radius: 8px;
+                          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          margin-bottom: 0;
+                        "
+                      >
+                        <tr>
+                          <td
+                            style="
+                              font-weight: bold;
+                              padding: 10px 8px;
+                              width: 180px;
+                            "
+                          >
+                            Account Number:
+                          </td>
+                          <td style="padding: 10px 8px">002502000014913</td>
+                        </tr>
+                        <tr>
+                          <td style="font-weight: bold; padding: 10px 8px">
+                            IFSC Code:
+                          </td>
+                          <td style="padding: 10px 8px">I0BA0000025</td>
+                        </tr>
+                        <tr>
+                          <td style="font-weight: bold; padding: 10px 8px">
+                            Branch:
+                          </td>
+                          <td style="padding: 10px 8px">Erode Main Branch</td>
+                        </tr>
+                        <tr>
+                          <td style="font-weight: bold; padding: 10px 8px">
+                            Bank:
+                          </td>
+                          <td style="padding: 10px 8px">
+                            Indian Overseas Bank
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                   </div>
-                  <div class="checkbox-container" style="margin-bottom: 16px">
-                    <input type="checkbox" id="agree" required />
-                    <label for="agree" class="checkbox-label">
-                      I agree to the <a href="#">Terms of Service</a>.
-                    </label>
-                  </div>
-                  <div class="donet_from_btn" style="text-align: left">
-                    <button
-                      type="submit"
-                      style="
-                        background: #2e7d32;
-                        color: #fff;
-                        border: none;
-                        padding: 12px 28px;
-                        border-radius: 8px;
-                        font-weight: bold;
-                        cursor: pointer;
-                      "
-                    >
-                      Donate Now
-                    </button>
-                  </div>
-                </form>
 
-                <!-- OR Divider -->
+                  <!-- OR Divider -->
 
+                  <div style="width: 350px">
+                    <img
+                      src="./assets/images/donat/qr-code.png"
+                      width="350px"
+                      alt=""
+                    />
+                  </div>
+                </div>
                 <!-- Motivation Text -->
                 <div class="top_content" style="margin-bottom: 18px">
                   <h2 style="font-size: 1.3em; margin-bottom: 10px">
@@ -862,162 +882,7 @@
         </div>
 
         <!-- Modal card after loading -->
-        <div class="modal-content" id="modalCard" style="display: none">
-          <div
-            style="
-              text-align: center;
-              margin: 5px 0;
-              font-weight: bold;
-              color: #888;
-            "
-          >
-            Even A Rupee Makes a Count
-          </div>
-
-          <!-- Bank Details -->
-          <div
-            class="widget_causes"
-            style="
-              background: #e3f2fd;
-              padding: 20px 18px;
-              border-radius: 12px;
-              margin-bottom: 30px;
-            "
-          >
-            <div class="donet_btn" style="margin-bottom: 10px">
-              <h3 style="margin-bottom: 10px; font-size: 1.5em">
-                Bank Details
-              </h3>
-              <ul style="list-style: none; padding: 0">
-                <li style="font-size: 1.3em; font-weight: bold">
-                  Sapphire Blue Social Trust
-                </li>
-              </ul>
-            </div>
-            <div class="title" style="margin-bottom: 0">
-              <table
-                style="
-                  width: 100%;
-                  font-size: 1.2em;
-                  background: #fff;
-                  border-radius: 8px;
-                  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-                  border-collapse: separate;
-                  border-spacing: 0;
-                  margin-bottom: 0;
-                "
-              >
-                <tr>
-                  <td
-                    style="font-weight: bold; padding: 10px 8px; width: 180px"
-                  >
-                    Account Number:
-                  </td>
-                  <td style="padding: 10px 8px">002502000014913</td>
-                </tr>
-                <tr>
-                  <td style="font-weight: bold; padding: 10px 8px">
-                    IFSC Code:
-                  </td>
-                  <td style="padding: 10px 8px">I0BA0000025</td>
-                </tr>
-                <tr>
-                  <td style="font-weight: bold; padding: 10px 8px">Branch:</td>
-                  <td style="padding: 10px 8px">Erode Main Branch</td>
-                </tr>
-                <tr>
-                  <td style="font-weight: bold; padding: 10px 8px">Bank:</td>
-                  <td style="padding: 10px 8px">Indian Overseas Bank</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-
-          <button id="cancelBtn" class="cancel-btn">Cancel</button>
-        </div>
       </div>
-
-      <script>
-        const form = document.querySelector(".donet_from");
-        const modal = document.getElementById("donationModal");
-        const spinnerContainer = document.getElementById("spinnerContainer");
-        const modalCard = document.getElementById("modalCard");
-        const timerText = document.getElementById("timerText");
-        const cancelBtn = document.getElementById("cancelBtn");
-
-        let timerInterval;
-
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          modal.classList.add("show");
-          spinnerContainer.style.display = "block";
-          modalCard.style.display = "none";
-
-          // Show spinner for 3 seconds
-          setTimeout(() => {
-            spinnerContainer.style.display = "none";
-            modalCard.style.display = "block";
-            startCountdown(120); // 2 minutes countdown
-          }, 3000);
-
-          form.reset();
-        });
-
-        function startCountdown(seconds) {
-          let remaining = seconds;
-          updateTimerDisplay(remaining);
-
-          timerInterval = setInterval(() => {
-            remaining--;
-            updateTimerDisplay(remaining);
-
-            if (remaining <= 0) {
-              clearInterval(timerInterval);
-              timerText.textContent = "Redirecting...";
-              setTimeout(() => {
-                modal.classList.remove("show");
-              }, 1500);
-            }
-          }, 1000);
-        }
-
-        function updateTimerDisplay(seconds) {
-          const mins = Math.floor(seconds / 60);
-          const secs = seconds % 60;
-          timerText.textContent = `Time remaining: ${mins}:${secs
-            .toString()
-            .padStart(2, "0")}`;
-        }
-
-        cancelBtn.addEventListener("click", () => {
-          clearInterval(timerInterval);
-          modal.classList.remove("show");
-        });
-
-        function startCountdown(seconds) {
-          let remaining = seconds;
-          updateTimerDisplay(remaining);
-
-          timerInterval = setInterval(() => {
-            remaining--;
-            updateTimerDisplay(remaining);
-
-            if (remaining <= 0) {
-              clearInterval(timerInterval);
-
-              // Change text to Redirecting...
-              timerText.textContent = "Redirecting...";
-              timerText.style.color = "#d32f2f"; // red color
-
-              // After 1.5 seconds, close modal
-              setTimeout(() => {
-                modal.classList.remove("show");
-              }, 1500);
-            }
-          }, 1000);
-        }
-      </script>
 
       <!-- ==== footer starts ====  -->
       <section class="footer_section">
